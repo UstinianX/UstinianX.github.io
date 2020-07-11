@@ -228,6 +228,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-playlist">
+          <a href="/playlist/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
+            
+            歌单
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -376,6 +386,11 @@
 <h2 id="添加歌单"><a href="#添加歌单" class="headerlink" title="添加歌单"></a>添加歌单</h2><p>创建歌单，复制代码<br><img src="https://ae01.alicdn.com/kf/Ub350f782a6774d0f8a619e8fee247af3s.jpg" alt=""></p>
 <p>把 <code>height=90</code> 改成 <code>height=66</code></p>
 <p>最后贴一张我的博客的效果图</p>
+<p><img src="https://ae01.alicdn.com/kf/U97a85f1666514b8494aab98b19b60e4fe.jpg" alt=""></p>
+<hr>
+<h2 id="也可以单独的做一个歌单页面"><a href="#也可以单独的做一个歌单页面" class="headerlink" title="也可以单独的做一个歌单页面"></a>也可以单独的做一个歌单页面</h2><p>最新版的 $\text{hexo-tag-aplayer}$ 已经支持了$\text{MetingJS}$的使用，可以直接解析网络平台的歌曲，首先要在站点配置文件中开启 $\text{meting}$ 模式，添加以下代码在配置文件的最后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></p>
+<p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;7634442256&quot; &quot;tencent&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
+<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
 
           
         
@@ -914,7 +929,7 @@
           <!-- 音乐播放器 -->
           <div>
             
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=0&id=5045667929&auto=1&height=66"></iframe>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29732992&auto=1&height=66"></iframe>
             
           </div>
 
