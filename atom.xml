@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ustinianx.com/"/>
-  <updated>2020-07-13T11:54:48.080Z</updated>
+  <updated>2020-07-13T12:18:55.568Z</updated>
   <id>https://www.ustinianx.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/"/>
     <id>https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/</id>
     <published>2020-07-13T11:49:45.550Z</published>
-    <updated>2020-07-13T11:54:48.080Z</updated>
+    <updated>2020-07-13T12:18:55.568Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>网易云终于恢复正常了！</p><p>昨天搞得我以为是我哪个文件写错了，把代码<code>sidebar.swig</code>和<code>主题配置文件</code>里的相关代码左左右右检查了好十几遍！ちくしょう！</p><p>多半是服务器$\text{GG}$了吧</p>]]></content>
     
@@ -35,10 +35,14 @@
     </summary>
     
     
-      <category term="随笔,吐槽" scheme="https://www.ustinianx.com/categories/%E9%9A%8F%E7%AC%94-%E5%90%90%E6%A7%BD/"/>
+      <category term="随笔" scheme="https://www.ustinianx.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="吐槽" scheme="https://www.ustinianx.com/categories/%E9%9A%8F%E7%AC%94/%E5%90%90%E6%A7%BD/"/>
     
     
-      <category term="随笔,吐槽" scheme="https://www.ustinianx.com/tags/%E9%9A%8F%E7%AC%94-%E5%90%90%E6%A7%BD/"/>
+      <category term="随笔" scheme="https://www.ustinianx.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="吐槽" scheme="https://www.ustinianx.com/tags/%E5%90%90%E6%A7%BD/"/>
     
   </entry>
   
@@ -70,7 +74,7 @@
     <link href="https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/"/>
     <id>https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</id>
     <published>2020-07-12T01:19:15.183Z</published>
-    <updated>2020-07-12T06:08:48.098Z</updated>
+    <updated>2020-07-13T12:19:24.147Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p><p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p><p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p><p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p><h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p><h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure><p><img src="https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg" alt=""></p><p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p><h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>]]></content>
     
@@ -87,7 +91,9 @@
       <category term="Hexo" scheme="https://www.ustinianx.com/categories/Hexo/"/>
     
     
-      <category term="Hexo,RSS" scheme="https://www.ustinianx.com/tags/Hexo-RSS/"/>
+      <category term="Hexo" scheme="https://www.ustinianx.com/tags/Hexo/"/>
+    
+      <category term="RSS" scheme="https://www.ustinianx.com/tags/RSS/"/>
     
   </entry>
   
