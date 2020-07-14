@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ustinianx.com/"/>
-  <updated>2020-07-12T06:20:05.334Z</updated>
+  <updated>2020-07-14T06:34:06.509Z</updated>
   <id>https://www.ustinianx.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网易云恢复正常了！</title>
+    <link href="https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/"/>
+    <id>https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/</id>
+    <published>2020-07-13T11:49:45.550Z</published>
+    <updated>2020-07-14T06:34:06.509Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>网易云终于恢复正常了！</p><p>昨天搞得我以为是我哪个文件写错了，把代码<code>sidebar.swig</code>和<code>主题配置文件</code>里的相关代码左左右右检查了好十几遍！ちくしょう！</p><p>多半是服务器$\text{GG}$了吧</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="随笔和" scheme="https://www.ustinianx.com/categories/%E9%9A%8F%E7%AC%94%E5%92%8C/"/>
+    
+    
+      <category term="随笔" scheme="https://www.ustinianx.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客添加浏览进度</title>
