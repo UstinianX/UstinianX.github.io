@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ustinianx.com/"/>
-  <updated>2020-07-14T06:37:15.070Z</updated>
+  <updated>2020-07-23T04:04:03.389Z</updated>
   <id>https://www.ustinianx.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <link href="https://www.ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/"/>
+    <id>https://www.ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</id>
+    <published>2020-07-23T03:48:56.663Z</published>
+    <updated>2020-07-23T04:04:03.389Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p><p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p><p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p><p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p><p>因此解决这方面问题的唯一办法就是</p><p><center><font type=等线 size=6 color=RED>换内存条<font type=等线 size=6 color=RED><center></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这其实这是国内某些厂家的噱头&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机原理" scheme="https://www.ustinianx.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="计算机原理" scheme="https://www.ustinianx.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>网易云恢复正常了！</title>
