@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ustinianx.com/"/>
-  <updated>2020-07-23T04:04:03.389Z</updated>
+  <updated>2020-08-01T09:10:24.143Z</updated>
   <id>https://www.ustinianx.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <link href="https://www.ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/"/>
+    <id>https://www.ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</id>
+    <published>2020-07-31T11:02:04.435Z</published>
+    <updated>2020-08-01T09:10:24.143Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p><p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;非常水的大水题&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="题解" scheme="https://www.ustinianx.com/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+      <category term="一本通" scheme="https://www.ustinianx.com/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>清理加速球没有卵用</title>
@@ -36,32 +59,6 @@
     
     
       <category term="计算机原理" scheme="https://www.ustinianx.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网易云恢复正常了！</title>
-    <link href="https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/"/>
-    <id>https://www.ustinianx.com/2020/07/13/%E7%BD%91%E6%98%93%E4%BA%91%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8%E4%BA%86%EF%BC%81/</id>
-    <published>2020-07-13T11:49:45.550Z</published>
-    <updated>2020-07-14T06:37:15.070Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>网易云终于恢复正常了！</p><p>昨天搞得我以为是我哪个文件写错了，把代码<code>sidebar.swig</code>和<code>主题配置文件</code>里的相关代码左左右右检查了好十几遍！ちくしょう！</p><p>多半是服务器$\text{GG}$了吧</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://www.ustinianx.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="https://www.ustinianx.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
