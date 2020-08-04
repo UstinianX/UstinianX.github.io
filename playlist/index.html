@@ -337,7 +337,7 @@
         
         
           
-    <div id="aplayer-KDAHEefg" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-msUHvFxO" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="7634442256" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div>
 <hr>
@@ -345,7 +345,7 @@
 <p><strong>莫名其妙的苏联味儿和日本味儿</strong></p>
 </blockquote>
 
-    <div id="aplayer-SsWacRCF" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-fMzwxmDg" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="7639198292" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div>
 
@@ -369,9 +369,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC81MDk3My8yNzQ1NQ"></div>
     </div>
-
   
 
 
@@ -669,25 +667,36 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-
-
-
-
-
-
-
-
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'KJoAwXYDVI34YtuBQUyRcmRo-gzGzoHsz',
+        appKey: 'J8H13qCXwKXfGj8HBrSKjp5w',
+        placeholder: '发射犇犇！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
