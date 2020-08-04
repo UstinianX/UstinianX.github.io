@@ -1994,7 +1994,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #32bfff;
+  background: #1d6f14;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3208,10 +3208,4 @@ pre .javascript .function {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
-}
-* {
-  cursor: url("http://qejdbqwyd.bkt.clouddn.com/%E9%98%90%E9%87%8A%E8%80%8564x64.ico"), auto !important;
-}
-:active {
-  cursor: url("http://qejdbqwyd.bkt.clouddn.com/%E9%80%90%E6%9A%97%E8%80%8564x64.ico"), auto !important;
 }
