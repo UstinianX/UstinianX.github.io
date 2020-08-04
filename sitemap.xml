@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ustinianx.com/playlist/index.html</loc>
+    
+    <lastmod>2020-08-04T12:52:07.806Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</loc>
     
     <lastmod>2020-08-04T08:40:09.174Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://www.ustinianx.com/404/index.html</loc>
     
     <lastmod>2020-08-04T03:21:14.071Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.ustinianx.com/playlist/index.html</loc>
-    
-    <lastmod>2020-07-17T10:18:20.000Z</lastmod>
     
   </url>
   
