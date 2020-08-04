@@ -10,9 +10,26 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -157,6 +174,8 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
+
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -263,7 +282,7 @@
         <li class="menu-item menu-item-about">
           <a href="/About/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-address-card"></i> <br />
             
             About
           </a>
@@ -403,7 +422,7 @@
                 alt="Kirito" />
             
               <p class="site-author-name" itemprop="name">Kirito</p>
-              <p class="site-description motion-element" itemprop="description">OIer</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻OIer</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -457,7 +476,7 @@
           <!-- 音乐播放器 -->
           <div>
             
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29732992&auto=1&height=66"></iframe>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=857619&auto=1&height=66"></iframe>
             
           </div>       
 
@@ -843,6 +862,8 @@ if(canvas.getContext){
   
 
 
+  
+
 
 
 
@@ -881,6 +902,11 @@ if(canvas.getContext){
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1449,6 +1475,9 @@ if(canvas.getContext){
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
 </script>
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":250,"height":450,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
