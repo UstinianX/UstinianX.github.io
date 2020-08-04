@@ -122,23 +122,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<p><center><font type=等线 size=6 color=RED>换内存条<font type=等线 size=6 color=RED><center></p>
-]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一本通1332：【例2-1】周末舞会 题解</title>
     <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
@@ -171,6 +154,23 @@
       </categories>
       <tags>
         <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<p><center><font type=等线 size=6 color=RED>换内存条<font type=等线 size=6 color=RED><center></p>
+]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
       </tags>
   </entry>
 </search>
