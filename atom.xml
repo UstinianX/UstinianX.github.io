@@ -5,9 +5,9 @@
   <subtitle>夜空のように、悲しい世界を優しく包みます</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.ustinianx.com/"/>
+  <link href="https://ustinianx.com/"/>
   <updated>2020-08-04T13:31:49.326Z</updated>
-  <id>https://www.ustinianx.com/</id>
+  <id>https://ustinianx.com/</id>
   
   <author>
     <name>Kirito</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <link href="https://www.ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/"/>
-    <id>https://www.ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</id>
+    <link href="https://ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/"/>
+    <id>https://ustinianx.com/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</id>
     <published>2020-07-31T11:02:04.435Z</published>
     <updated>2020-08-04T13:31:49.326Z</updated>
     
@@ -32,21 +32,21 @@
     </summary>
     
     
-      <category term="题解" scheme="https://www.ustinianx.com/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://ustinianx.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="一本通" scheme="https://www.ustinianx.com/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
+      <category term="一本通" scheme="https://ustinianx.com/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
     
   </entry>
   
   <entry>
     <title>清理加速球没有卵用</title>
-    <link href="https://www.ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/"/>
-    <id>https://www.ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</id>
+    <link href="https://ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/"/>
+    <id>https://ustinianx.com/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</id>
     <published>2020-07-23T03:48:56.663Z</published>
-    <updated>2020-08-04T08:40:03.211Z</updated>
+    <updated>2020-08-05T02:51:28.325Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p><p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p><p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p><p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p><p>因此解决这方面问题的唯一办法就是</p><p><center><font type=等线 size=6 color=RED>换内存条<font type=等线 size=6 color=RED><center></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p><p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p><p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p><p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p><p>因此解决这方面问题的唯一办法就是</p><center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
     
     <summary type="html">
     
@@ -55,17 +55,17 @@
     </summary>
     
     
-      <category term="计算机原理" scheme="https://www.ustinianx.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+      <category term="计算机原理" scheme="https://ustinianx.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
     
     
-      <category term="计算机原理" scheme="https://www.ustinianx.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+      <category term="计算机原理" scheme="https://ustinianx.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加浏览进度</title>
-    <link href="https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/"/>
-    <id>https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</id>
+    <link href="https://ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/"/>
+    <id>https://ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</id>
     <published>2020-07-12T06:07:33.478Z</published>
     <updated>2020-08-04T08:40:05.960Z</updated>
     
@@ -78,17 +78,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加RSS订阅功能</title>
-    <link href="https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/"/>
-    <id>https://www.ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</id>
+    <link href="https://ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/"/>
+    <id>https://ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</id>
     <published>2020-07-12T01:19:15.183Z</published>
     <updated>2020-08-04T08:40:09.174Z</updated>
     
@@ -104,19 +104,19 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/tags/Hexo/"/>
     
-      <category term="RSS" scheme="https://www.ustinianx.com/tags/RSS/"/>
+      <category term="RSS" scheme="https://ustinianx.com/tags/RSS/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加背景音乐</title>
-    <link href="https://www.ustinianx.com/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/"/>
-    <id>https://www.ustinianx.com/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</id>
+    <link href="https://ustinianx.com/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/"/>
+    <id>https://ustinianx.com/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</id>
     <published>2020-07-11T06:17:48.875Z</published>
     <updated>2020-08-04T08:40:00.397Z</updated>
     
@@ -129,17 +129,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://www.ustinianx.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://ustinianx.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>内网穿透的实现</title>
-    <link href="https://www.ustinianx.com/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
-    <id>https://www.ustinianx.com/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
+    <link href="https://ustinianx.com/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://ustinianx.com/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
     <published>2020-07-11T04:25:18.028Z</published>
     <updated>2020-08-04T08:38:28.866Z</updated>
     
@@ -152,17 +152,17 @@
     </summary>
     
     
-      <category term="NET" scheme="https://www.ustinianx.com/categories/NET/"/>
+      <category term="NET" scheme="https://ustinianx.com/categories/NET/"/>
     
     
-      <category term="内网穿透" scheme="https://www.ustinianx.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+      <category term="内网穿透" scheme="https://ustinianx.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
   </entry>
   
   <entry>
     <title>VMWare虚拟机滥用指南</title>
-    <link href="https://www.ustinianx.com/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-    <id>https://www.ustinianx.com/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/</id>
+    <link href="https://ustinianx.com/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://ustinianx.com/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-07-11T04:19:12.622Z</published>
     <updated>2020-08-04T08:39:53.783Z</updated>
     
@@ -175,17 +175,17 @@
     </summary>
     
     
-      <category term="Software" scheme="https://www.ustinianx.com/categories/Software/"/>
+      <category term="Software" scheme="https://ustinianx.com/categories/Software/"/>
     
     
-      <category term="虚拟机" scheme="https://www.ustinianx.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <category term="虚拟机" scheme="https://ustinianx.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.ustinianx.com/2020/07/10/hello-world/"/>
-    <id>https://www.ustinianx.com/2020/07/10/hello-world/</id>
+    <link href="https://ustinianx.com/2020/07/10/hello-world/"/>
+    <id>https://ustinianx.com/2020/07/10/hello-world/</id>
     <published>2020-07-10T11:20:08.446Z</published>
     <updated>2020-07-10T14:48:17.824Z</updated>
     
