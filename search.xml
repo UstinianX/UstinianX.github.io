@@ -1,49 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/07/10/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
 <p>而 $\text{NexT}$，则是一个集成有非常多功能、并且兼容性极好</p>
 <p>因此本文选择了 $\text{Hexo+NexT}$ 的搭配</p>
 <a id="more"></a>
-<h1 id="一、-text-Hexo-简介"><a href="#一、-text-Hexo-简介" class="headerlink" title="一、$\text{Hexo}$ 简介"></a>一、$\text{Hexo}$ 简介</h1><p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。可以进入hexo官网进行详细查看（毕竟官方文档很有用），因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
-<h1 id="二、配置-text-Hexo"><a href="#二、配置-text-Hexo" class="headerlink" title="二、配置 $\text{Hexo}$"></a>二、配置 $\text{Hexo}$</h1><h2 id="1-安装-text-Git"><a href="#1-安装-text-Git" class="headerlink" title="1. 安装 $\text{Git}$"></a>1. 安装 $\text{Git}$</h2><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。</p>
+<h1 id="第一部分：-text-Hexo-简介"><a href="#第一部分：-text-Hexo-简介" class="headerlink" title="第一部分： $\text{Hexo}$ 简介"></a>第一部分： $\text{Hexo}$ 简介</h1><p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。可以进入hexo官网进行详细查看（毕竟官方文档很有用），因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
+<h1 id="第二部分：-配置-text-Hexo"><a href="#第二部分：-配置-text-Hexo" class="headerlink" title="第二部分： 配置 $\text{Hexo}$"></a>第二部分： 配置 $\text{Hexo}$</h1><h2 id="1-安装-text-Git"><a href="#1-安装-text-Git" class="headerlink" title="1. 安装 $\text{Git}$"></a>1. 安装 $\text{Git}$</h2><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。</p>
 <p>请到<a href="https://gitforwindows.org/" target="_blank" rel="noopener"><strong>官网</strong></a>下载，然后打开 <strong>$\text{Git Bash}$命令行工具</strong></p>
 <p>安装完成后，使用 <code>git version</code> 验证版本</p>
 <p><img src="https://ae03.alicdn.com/kf/H47720fa35e7e4fb686f6cb798b857b450.png" alt="正确显示应该是这样的，版本因人而异"></p>
@@ -60,7 +25,7 @@
 <p>说一个小诀窍：你可以<code>hexo g &amp;&amp; hexo s</code>，一步到位</p>
 <h2 id="4-创建-text-GitHub-个人仓库"><a href="#4-创建-text-GitHub-个人仓库" class="headerlink" title="4. 创建 $\text{GitHub}$个人仓库"></a>4. 创建 $\text{GitHub}$个人仓库</h2><p>登录你的GitHub账号，创建一个新的仓库（没有账号的、不会创建的请自行BFS）</p>
 <p><strong>仓库名创建为 <code>你的用户名.github.io</code>，不然无法识别</strong></p>
-<p><img src="https://ae05.alicdn.com/kf/H6ca81a9c2eeb40d6a90a953c5cd6bc66w.png" alt="如图"></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/afqJDe.png" alt="afqJDe.png"></p>
 <p>选择<code>Public</code></p>
 <h2 id="5-生成-text-SSH-并添加到-text-GitHub"><a href="#5-生成-text-SSH-并添加到-text-GitHub" class="headerlink" title="5. 生成 $\text{SSH}$ 并添加到 $\text{GitHub}$"></a>5. 生成 $\text{SSH}$ 并添加到 $\text{GitHub}$</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail</span><br><span class="line">``` </span><br><span class="line">```yourname``` 就是你的GitHub用户名，```youremail``` 是你的GitHub的注册邮箱。这是Github用来验证账户的。</span><br><span class="line"></span><br><span class="line">可以用下面的命令检查输入是否正确</span><br><span class="line">```bash</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
 <p>接下来创建SSH，全部点回车就可以了<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure><br>你会在大概会在C:\Users\Administrator中找到这个文件夹，用记事本打开。</p>
@@ -73,7 +38,7 @@
 <p>另外说一下，<strong>生成和部署</strong>可以合为 <code>hexo g -d</code> 。</p>
 <p>现在，你可以打开 <code>source\_posts</code>，在里面创建<code>Markdown</code>文件，可以在里面写文章了！</p>
 <hr>
-<h1 id="三、-text-Hexo-基本操作"><a href="#三、-text-Hexo-基本操作" class="headerlink" title="三、 $\text{Hexo}$ 基本操作"></a>三、 $\text{Hexo}$ 基本操作</h1><h2 id="1-设置网站的基本框架"><a href="#1-设置网站的基本框架" class="headerlink" title="1. 设置网站的基本框架"></a>1. 设置网站的基本框架</h2><div class="table-container">
+<h1 id="第三部分：-text-Hexo-基本操作"><a href="#第三部分：-text-Hexo-基本操作" class="headerlink" title="第三部分： $\text{Hexo}$ 基本操作"></a>第三部分： $\text{Hexo}$ 基本操作</h1><h2 id="1-设置网站的基本框架"><a href="#1-设置网站的基本框架" class="headerlink" title="1. 设置网站的基本框架"></a>1. 设置网站的基本框架</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -133,7 +98,7 @@
 <h2 id="3-Draft（草稿）"><a href="#3-Draft（草稿）" class="headerlink" title="3. Draft（草稿）"></a>3. Draft（草稿）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft newpage</span><br></pre></td></tr></table></figure>
 <p>这样会在 <code>source/_draft</code> 中新建一个 <code>newpage.md</code> 文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure><br>在本地端口中开启服务预览。</p>
 <p>如果你的草稿文件写完了，想要发表到<code>post</code>中，下面的代码就会自动把<code>newpage.md</code>发送到<code>post</code>中。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish draft newpage</span><br></pre></td></tr></table></figure></p>
-<h1 id="四、-text-Hexo-优化"><a href="#四、-text-Hexo-优化" class="headerlink" title="四、 $\text{Hexo}$ 优化"></a>四、 $\text{Hexo}$ 优化</h1><h2 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1. 更换主题"></a>1. 更换主题</h2><p>在这里，窝推荐两款主题</p>
+<h1 id="第四部分：-text-Hexo-优化"><a href="#第四部分：-text-Hexo-优化" class="headerlink" title="第四部分： $\text{Hexo}$ 优化"></a>第四部分： $\text{Hexo}$ 优化</h1><h2 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1. 更换主题"></a>1. 更换主题</h2><p>在这里，窝推荐两款主题</p>
 <ul>
 <li>$\text{Shana}$ <strong>非常优秀的二次元主题</strong>。缺点是集成的功能比较少，需要自己读代码写文件（开发者似乎大学毕业了，回issue回答比较慢），而且开发者的主要开发方向是PC端</li>
 <li>$\text{NexT}$  <strong>非常优秀、功能极为强大、易于操作的主题</strong>。如果喜欢各种效果实现各种功能，选择这个会比较方便，移动端效果比较好</li>
@@ -148,10 +113,66 @@
 <h3 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h3><p>请自行阅读<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT官方文档</a></p>
 <h2 id="2-添加-text-RSS-订阅功能"><a href="#2-添加-text-RSS-订阅功能" class="headerlink" title="2. 添加 $\text{RSS}$ 订阅功能"></a>2. 添加 $\text{RSS}$ 订阅功能</h2><p>可以参照我的<a href="https://ustinianx.com/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/">这篇文章</a></p>
 <h3 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h3><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h3 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
 <!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg) -->
 <p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h3 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h3><p>从邮件里添加RSS的网址就好了</p>
+<h3 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h3><p>自行Google</p>
+<p>推荐世界第一RSS阅读器 <a href="https://inoreader.en.softonic.com/" target="_blank" rel="noopener"><code>inoreader</code></a></p>
+<h2 id="3-绑定个人域名"><a href="#3-绑定个人域名" class="headerlink" title="3. 绑定个人域名"></a>3. 绑定个人域名</h2><h3 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h3><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
+<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
+<h3 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h3><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
+<h3 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h3><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
+<h3 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h3><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
+<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
+<h3 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h3><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
+<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
+<h2 id="国内外分流"><a href="#国内外分流" class="headerlink" title="国内外分流"></a>国内外分流</h2><p>但是吧，这一点我并不会做，正在研究，过段时间会补上的。</p>
+<p>BFS吧</p>
+<h1 id="第五部分：-text-Hexo-功能"><a href="#第五部分：-text-Hexo-功能" class="headerlink" title="第五部分： $\text{Hexo}$ 功能"></a>第五部分： $\text{Hexo}$ 功能</h1><h2 id="1-text-SEO-优化"><a href="#1-text-SEO-优化" class="headerlink" title="1. $\text{SEO}$ 优化"></a>1. $\text{SEO}$ 优化</h2><p>首先需要让搜索引擎收录你的这个网站，别人才能搜索的到，那么这就需要SEO优化了</p>
+<blockquote>
+<p>SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。</p>
+</blockquote>
+<h3 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h3><p>登录 <a href="https://ziyuan.baidu.com/linksubmit/index" target="_blank" rel="noopener">百度站长平台</a>，在站点管理中添加自己的网站。</p>
+<p>验证方式选择 $\text{HTML}$标签 验证，我们需要获取的是红框内的这串代码</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahDIpt.png" alt=""></p>
+<p>打开<code>站点配置文件</code>，添加以下两行，并把刚才的代码填在baidu那一行之后，注意与冒号之间要有空格。<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">google_site_verification:</span> </span><br><span class="line"><span class="attr">baidu-site-verification:</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h3><p>首先安装插件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure></p>
+<p>在<code>站点配置文件</code>添加以下代码</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+<p><del>不过有大佬说这可有可无</del></p>
+<p>然后执行一下 <code>hexo cl &amp;&amp; hexo g</code>，在 <code>public</code> 中找到 <code>baidusitemap.xml</code> 和 <code>sitemap.xml</code>，用VSCode的查找和替换功能，把所有的 <code>http://yoursite.com/</code> 换成我们自己的域名。然后不需要<code>generate</code>，直接<code>deploy</code>就可以了。</p>
+<h3 id="百度主动提交"><a href="#百度主动提交" class="headerlink" title="百度主动提交"></a>百度主动提交</h3><p>执行一下<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure><br>然后在<code>站点配置文件</code>中插入，填入你的<code>token</code><br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Baidu主动推送</span></span><br><span class="line"><span class="attr">baidu_url_submit:</span></span><br><span class="line">  <span class="attr">count:</span> <span class="number">5</span> <span class="comment">## 提交最新的五个链接</span></span><br><span class="line">  <span class="attr">host:</span>  <span class="comment">## 百度站长平台中注册的域名</span></span><br><span class="line">  <span class="attr">token:</span>  <span class="comment">## 准入秘钥</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">baidu_urls.txt</span> <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></span><br></pre></td></tr></table></figure><br>$\text{token}$ 是<code>主动推送（实时）</code>中的</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahgVln.png" alt=""></p>
+<p>随后在<code>主题配置文件</code>中搜索找到 <code>baidu_push</code> 段落，将其改为<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>之后在 <code>themes\next\layout\_partials\head.swig</code> 中搜索 <code>baidu_site_verification</code><br><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.baidu_site_verification %&#125;</span><br><span class="line">  &lt;meta name=<span class="string">"baidu-site-verification"</span> content=<span class="string">"&#123;&#123; theme.qihu_site_verification &#125;&#125;"</span> /&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>把 <code>content</code> 后面换成自己的token，<font color=RED>只需要刚才的token，括号和引号都不需要。</font></p>
+<h3 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h3><p>累了，明天再写，跟百度差不多</p>
+<center><font size=5 color=Orange>未完待续</font></center>
+
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -159,6 +180,20 @@
       <tags>
         <tag>Hexo</tag>
         <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -193,71 +228,6 @@
       </categories>
       <tags>
         <tag>虚拟机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>内网穿透的实现</title>
-    <url>/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
-<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
-<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
-<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
-<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
-<p>（二）</p>
-<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
-<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
-<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
-<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
-<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>NET</category>
-      </categories>
-      <tags>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>
@@ -296,6 +266,94 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/07/10/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
+    <url>/2020/08/07/%E6%83%B3%E8%A6%81%E8%AE%A9%E5%8D%9A%E5%AE%A2%E9%80%BC%E6%A0%BC%E6%9B%B4%E9%AB%98%EF%BC%9FHexo%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
+<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
+<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
+<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
+<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
+<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
+<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内网穿透的实现</title>
+    <url>/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
+<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
+<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
+<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
+<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
+<p>（二）</p>
+<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
+<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
+<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
+<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
+<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>NET</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
       </tags>
   </entry>
 </search>
