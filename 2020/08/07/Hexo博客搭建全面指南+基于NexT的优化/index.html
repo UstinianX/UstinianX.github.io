@@ -119,8 +119,10 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/08/07/ahwaTA.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/08/07/ahDIpt.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/08/07/ahgVln.png">
+<meta property="og:image" content="https://ae04.alicdn.com/kf/U4175cb32d23c4244a3e5ae45265d1f0cJ.png">
+<meta property="og:image" content="https://ae03.alicdn.com/kf/U1d1dc42111fc48339072dec437dcdc31E.png">
 <meta property="article:published_time" content="2020-08-07T02:47:16.525Z">
-<meta property="article:modified_time" content="2020-08-07T15:10:05.250Z">
+<meta property="article:modified_time" content="2020-08-08T13:33:13.455Z">
 <meta property="article:author" content="Kirito">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -530,7 +532,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  10
                 </span>
               
             </div>
@@ -697,7 +699,11 @@
 <p><img src="https://s1.ax1x.com/2020/08/07/ahgVln.png" alt=""></p>
 <p>随后在<code>主题配置文件</code>中搜索找到 <code>baidu_push</code> 段落，将其改为<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>之后在 <code>themes\next\layout\_partials\head.swig</code> 中搜索 <code>baidu_site_verification</code><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.baidu_site_verification %&#125;</span><br><span class="line">  &lt;meta name=<span class="string">"baidu-site-verification"</span> content=<span class="string">"&#123;&#123; theme.qihu_site_verification &#125;&#125;"</span> /&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>把 <code>content</code> 后面换成自己的token，<font color=RED>只需要刚才的token，括号和引号都不需要。</font></p>
-<h3 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h3><p>累了，明天再写，跟百度差不多</p>
+<h3 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h3><p>需要小梯子</p>
+<p>首先选择资源类型，一般选择网页前缀</p>
+<p><img src="https://ae04.alicdn.com/kf/U4175cb32d23c4244a3e5ae45265d1f0cJ.png" alt="image.png"></p>
+<p>$\text{Google}$会自动帮你完成验证。如果没有成功，那么复制HTML代码中的部分内容，填到刚才 <code>themes\next\layout\_partials\head.swig</code> 中的相应字段中。</p>
+<p><img src="https://ae03.alicdn.com/kf/U1d1dc42111fc48339072dec437dcdc31E.png" alt="image.png"></p>
 <center><font size=5 color=Orange>未完待续</font></center>
 
 
@@ -719,7 +725,7 @@
   <p><span>本文标题:</span><a href="/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/">Hexo博客搭建全面指南+基于NexT的优化</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kirito 的个人博客">Kirito</a></p>
   <p><span>发布时间:</span>2020年08月07日 - 10:47</p>
-  <p><span>最后更新:</span>2020年08月07日 - 23:10</p>
+  <p><span>最后更新:</span>2020年08月08日 - 21:33</p>
   <p><span>原始链接:</span><a href="/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/" title="Hexo博客搭建全面指南+基于NexT的优化">https://ustinianx.com/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://ustinianx.com/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/"  aria-label="复制成功！"></i></span>
   </p>
@@ -990,7 +996,6 @@ var jiathis_config={
 
 
           
-
         </div>
       </section>
 
@@ -1282,6 +1287,11 @@ if(canvas.getContext){
 </script>
 
       
+      
+
+
+    
+
 
 
     </div>
@@ -1295,8 +1305,8 @@ if(canvas.getContext){
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Kirito</span>
 
@@ -2000,9 +2010,15 @@ if(canvas.getContext){
 
 
 
+
+
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":250,"height":450,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
 
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
 

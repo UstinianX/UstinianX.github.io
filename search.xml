@@ -22,44 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加背景音乐</title>
-    <url>/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
-<h2 id="下面我将会提到数种方法，选择一种最合适的即可"><a href="#下面我将会提到数种方法，选择一种最合适的即可" class="headerlink" title="下面我将会提到数种方法，选择一种最合适的即可"></a>下面我将会提到数种方法，选择一种最合适的即可</h2><h2 id="1-直接插入到某一篇文章"><a href="#1-直接插入到某一篇文章" class="headerlink" title="1.直接插入到某一篇文章"></a>1.直接插入到某一篇文章</h2><h3 id="text-iframe-标签"><a href="#text-iframe-标签" class="headerlink" title="$\text{iframe}$标签"></a>$\text{iframe}$标签</h3><p>相当的简单</p>
-<p>先到网易云音乐中中搜出你想要的音乐，然后点击<strong>生成外链播放器</strong></p>
-<p>所需要的所有代码都在这个框框内了</p>
-<p><img src="https://s1.ax1x.com/2020/07/11/UQzKDs.png" alt="温馨提示：打开这个页面的时候记得关闭声音"></p>
-<p>然后把这个代码粘贴到你的文章的$\text{.md}$文件中，就可以显示了</p>
-<p><img src="https://s1.ax1x.com/2020/07/11/UlSflF.png" alt="大概就是......这个样子的"></p>
-<h3 id="text-JavaScript-标签"><a href="#text-JavaScript-标签" class="headerlink" title="$\text{JavaScript}$标签"></a>$\text{JavaScript}$标签</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://ae01.alicdn.com/kf/U9977f35f4c25466ca7b7fc536dc5a0cca.jpg" alt="就是这个效果"></p>
-<h2 id="2-使用-text-Hexo-tag-Aplayer-插件"><a href="#2-使用-text-Hexo-tag-Aplayer-插件" class="headerlink" title="2.使用$\text{Hexo-tag-Aplayer}$插件"></a>2.使用$\text{Hexo-tag-Aplayer}$插件</h2><p>$\text{hexo-tag-aplayer}$是$\text{Aplayer}$在$\text{Hexo}$上的插件，其配置可以参考<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">官方文档</a><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-tag-aplayer</span></span><br></pre></td></tr></table></figure></p>
-<p>在文章的markdown文档里添加<br><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"她的睫毛"</span> <span class="string">"周杰伦"</span> <span class="string">"http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3"</span>  <span class="string">"http://home.ustc.edu.cn/~mmmwhy/jay.jpg"</span> <span class="string">"autoplay=false"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ae01.alicdn.com/kf/Udfd851ed33b64db4a48fa81beed53effG.jpg" alt="Aplayer"></p>
-<hr>
-<h2 id="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"><a href="#以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面" class="headerlink" title="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"></a>以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面</h2><h3 id="可以控制是否自动播放（自动播放移动端不支持）"><a href="#可以控制是否自动播放（自动播放移动端不支持）" class="headerlink" title="可以控制是否自动播放（自动播放移动端不支持）"></a>可以控制是否自动播放（<del>自动播放移动端不支持</del>）</h3><p>修改  <code>themes/next/layout/_macro/sidebar.swig</code>  文件</p>
-<p>添加播放器内容<br><figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 音乐播放器 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.background_music %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; theme.background_music &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br><img src="https://s1.ax1x.com/2020/07/11/Ul97RK.png" alt="注意上下文位置"></p>
-<p>在 <code>themes/next/_config.yml</code> 主题配置文件中添加歌单地址配置</p>
-<figure class="highlight plain"><figcaption><span>//music.163.com/outchain/player?type</span></figcaption><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line">background_music:</span><br></pre></td></tr></table></figure>
-<p>如图所示填入歌曲的部分HTML代码</p>
-<hr>
-<h2 id="添加歌单"><a href="#添加歌单" class="headerlink" title="添加歌单"></a>添加歌单</h2><p>创建歌单，复制代码<br><img src="https://ae01.alicdn.com/kf/Ub350f782a6774d0f8a619e8fee247af3s.jpg" alt=""></p>
-<p>把 <code>height=90</code> 改成 <code>height=66</code></p>
-<p>最后贴一张我的博客的效果图</p>
-<p><img src="https://ae01.alicdn.com/kf/U97a85f1666514b8494aab98b19b60e4fe.jpg" alt=""></p>
-<hr>
-<h2 id="也可以单独的做一个歌单页面"><a href="#也可以单独的做一个歌单页面" class="headerlink" title="也可以单独的做一个歌单页面"></a>也可以单独的做一个歌单页面</h2><p>最新版的 $\text{hexo-tag-aplayer}$ 已经支持了$\text{MetingJS}$的使用，可以直接解析网络平台的歌曲，首先要在站点配置文件中开启 $\text{meting}$ 模式，添加以下代码在配置文件的最后：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% meting <span class="string">"7634442256"</span> <span class="string">"tencent"</span> <span class="string">"playlist"</span> <span class="string">"theme:#FF4081"</span> <span class="string">"mode:circulation"</span> <span class="string">"mutex:true"</span> <span class="string">"listmaxheight:340px"</span> <span class="string">"preload:auto"</span> %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
-<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -208,7 +170,11 @@
 <p><img src="https://s1.ax1x.com/2020/08/07/ahgVln.png" alt=""></p>
 <p>随后在<code>主题配置文件</code>中搜索找到 <code>baidu_push</code> 段落，将其改为<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>之后在 <code>themes\next\layout\_partials\head.swig</code> 中搜索 <code>baidu_site_verification</code><br><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.baidu_site_verification %&#125;</span><br><span class="line">  &lt;meta name=<span class="string">"baidu-site-verification"</span> content=<span class="string">"&#123;&#123; theme.qihu_site_verification &#125;&#125;"</span> /&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>把 <code>content</code> 后面换成自己的token，<font color=RED>只需要刚才的token，括号和引号都不需要。</font></p>
-<h3 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h3><p>累了，明天再写，跟百度差不多</p>
+<h3 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h3><p>需要小梯子</p>
+<p>首先选择资源类型，一般选择网页前缀</p>
+<p><img src="https://ae04.alicdn.com/kf/U4175cb32d23c4244a3e5ae45265d1f0cJ.png" alt="image.png"></p>
+<p>$\text{Google}$会自动帮你完成验证。如果没有成功，那么复制HTML代码中的部分内容，填到刚才 <code>themes\next\layout\_partials\head.swig</code> 中的相应字段中。</p>
+<p><img src="https://ae03.alicdn.com/kf/U1d1dc42111fc48339072dec437dcdc31E.png" alt="image.png"></p>
 <center><font size=5 color=Orange>未完待续</font></center>
 
 
@@ -221,12 +187,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>Hexo博客添加背景音乐</title>
+    <url>/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
+<h2 id="下面我将会提到数种方法，选择一种最合适的即可"><a href="#下面我将会提到数种方法，选择一种最合适的即可" class="headerlink" title="下面我将会提到数种方法，选择一种最合适的即可"></a>下面我将会提到数种方法，选择一种最合适的即可</h2><h2 id="1-直接插入到某一篇文章"><a href="#1-直接插入到某一篇文章" class="headerlink" title="1.直接插入到某一篇文章"></a>1.直接插入到某一篇文章</h2><h3 id="text-iframe-标签"><a href="#text-iframe-标签" class="headerlink" title="$\text{iframe}$标签"></a>$\text{iframe}$标签</h3><p>相当的简单</p>
+<p>先到网易云音乐中中搜出你想要的音乐，然后点击<strong>生成外链播放器</strong></p>
+<p>所需要的所有代码都在这个框框内了</p>
+<p><img src="https://s1.ax1x.com/2020/07/11/UQzKDs.png" alt="温馨提示：打开这个页面的时候记得关闭声音"></p>
+<p>然后把这个代码粘贴到你的文章的$\text{.md}$文件中，就可以显示了</p>
+<p><img src="https://s1.ax1x.com/2020/07/11/UlSflF.png" alt="大概就是......这个样子的"></p>
+<h3 id="text-JavaScript-标签"><a href="#text-JavaScript-标签" class="headerlink" title="$\text{JavaScript}$标签"></a>$\text{JavaScript}$标签</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ae01.alicdn.com/kf/U9977f35f4c25466ca7b7fc536dc5a0cca.jpg" alt="就是这个效果"></p>
+<h2 id="2-使用-text-Hexo-tag-Aplayer-插件"><a href="#2-使用-text-Hexo-tag-Aplayer-插件" class="headerlink" title="2.使用$\text{Hexo-tag-Aplayer}$插件"></a>2.使用$\text{Hexo-tag-Aplayer}$插件</h2><p>$\text{hexo-tag-aplayer}$是$\text{Aplayer}$在$\text{Hexo}$上的插件，其配置可以参考<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">官方文档</a><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-tag-aplayer</span></span><br></pre></td></tr></table></figure></p>
+<p>在文章的markdown文档里添加<br><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"她的睫毛"</span> <span class="string">"周杰伦"</span> <span class="string">"http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3"</span>  <span class="string">"http://home.ustc.edu.cn/~mmmwhy/jay.jpg"</span> <span class="string">"autoplay=false"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ae01.alicdn.com/kf/Udfd851ed33b64db4a48fa81beed53effG.jpg" alt="Aplayer"></p>
+<hr>
+<h2 id="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"><a href="#以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面" class="headerlink" title="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"></a>以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面</h2><h3 id="可以控制是否自动播放（自动播放移动端不支持）"><a href="#可以控制是否自动播放（自动播放移动端不支持）" class="headerlink" title="可以控制是否自动播放（自动播放移动端不支持）"></a>可以控制是否自动播放（<del>自动播放移动端不支持</del>）</h3><p>修改  <code>themes/next/layout/_macro/sidebar.swig</code>  文件</p>
+<p>添加播放器内容<br><figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 音乐播放器 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.background_music %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; theme.background_music &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br><img src="https://s1.ax1x.com/2020/07/11/Ul97RK.png" alt="注意上下文位置"></p>
+<p>在 <code>themes/next/_config.yml</code> 主题配置文件中添加歌单地址配置</p>
+<figure class="highlight plain"><figcaption><span>//music.163.com/outchain/player?type</span></figcaption><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line">background_music:</span><br></pre></td></tr></table></figure>
+<p>如图所示填入歌曲的部分HTML代码</p>
+<hr>
+<h2 id="添加歌单"><a href="#添加歌单" class="headerlink" title="添加歌单"></a>添加歌单</h2><p>创建歌单，复制代码<br><img src="https://ae01.alicdn.com/kf/Ub350f782a6774d0f8a619e8fee247af3s.jpg" alt=""></p>
+<p>把 <code>height=90</code> 改成 <code>height=66</code></p>
+<p>最后贴一张我的博客的效果图</p>
+<p><img src="https://ae01.alicdn.com/kf/U97a85f1666514b8494aab98b19b60e4fe.jpg" alt=""></p>
+<hr>
+<h2 id="也可以单独的做一个歌单页面"><a href="#也可以单独的做一个歌单页面" class="headerlink" title="也可以单独的做一个歌单页面"></a>也可以单独的做一个歌单页面</h2><p>最新版的 $\text{hexo-tag-aplayer}$ 已经支持了$\text{MetingJS}$的使用，可以直接解析网络平台的歌曲，首先要在站点配置文件中开启 $\text{meting}$ 模式，添加以下代码在配置文件的最后：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% meting <span class="string">"7634442256"</span> <span class="string">"tencent"</span> <span class="string">"playlist"</span> <span class="string">"theme:#FF4081"</span> <span class="string">"mode:circulation"</span> <span class="string">"mutex:true"</span> <span class="string">"listmaxheight:340px"</span> <span class="string">"preload:auto"</span> %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
+<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -283,19 +273,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>内网穿透的实现</title>
     <url>/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
@@ -315,6 +292,49 @@
       </categories>
       <tags>
         <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>
@@ -341,22 +361,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
       </tags>
   </entry>
 </search>
