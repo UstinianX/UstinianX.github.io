@@ -22,6 +22,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -187,6 +201,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/07/10/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo博客添加背景音乐</title>
     <url>/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
@@ -225,18 +253,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/07/10/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>内网穿透的实现</title>
+    <url>/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
+<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
+<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
+<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
+<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
+<p>（二）</p>
+<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
+<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
+<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
+<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
+<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
 ]]></content>
+      <categories>
+        <category>NET</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
+      </tags>
   </entry>
   <entry>
     <title>VMWare虚拟机滥用指南</title>
@@ -273,42 +322,6 @@
       </tags>
   </entry>
   <entry>
-    <title>内网穿透的实现</title>
-    <url>/2020/07/11/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
-<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
-<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
-<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
-<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
-<p>（二）</p>
-<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
-<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
-<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
-<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
-<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>NET</category>
-      </categories>
-      <tags>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清理加速球没有卵用</title>
     <url>/2020/07/23/%E6%B8%85%E7%90%86%E5%8A%A0%E9%80%9F%E7%90%83%E6%B2%A1%E6%9C%89%E5%8D%B5%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
@@ -322,19 +335,6 @@
       </categories>
       <tags>
         <tag>计算机原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/2020/07/31/%E4%B8%80%E6%9C%AC%E9%80%9A1332%EF%BC%9A%E3%80%90%E4%BE%8B2-1%E3%80%91%E5%91%A8%E6%9C%AB%E8%88%9E%E4%BC%9A%20%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>
