@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/2020/08/07/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97+%E5%9F%BA%E4%BA%8ENexT%E7%9A%84%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -166,61 +201,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VMWare虚拟机滥用指南</title>
-    <url>/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
-<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
-<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
-<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
-<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
-<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
-<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
-<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
-<p>选择文件</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
-<p>自行设置</p>
-<p>用户名和密码将会是Linux系统的用户名和密码</p>
-<p>下面自行设置就好了</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
-<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
-<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
-<p>默认的SCSI就没有问题</p>
-<p>这些都是硬盘接口</p>
-<p>IDE最慢，NVMe最快</p>
-<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
-<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
-<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>虚拟机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客添加背景音乐</title>
     <url>/2020/07/11/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
@@ -259,17 +239,37 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/2020/07/12/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>VMWare虚拟机滥用指南</title>
+    <url>/2020/07/11/VMWare%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%BB%A5%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
+<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
+<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
+<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
+<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
+<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
+<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
+<p>选择文件</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
+<p>自行设置</p>
+<p>用户名和密码将会是Linux系统的用户名和密码</p>
+<p>下面自行设置就好了</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
+<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
+<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
+<p>默认的SCSI就没有问题</p>
+<p>这些都是硬盘接口</p>
+<p>IDE最慢，NVMe最快</p>
+<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
+<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
+<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
+]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Software</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -297,32 +297,6 @@
       </categories>
       <tags>
         <tag>一本通</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
-    <url>/2020/08/07/%E6%83%B3%E8%A6%81%E8%AE%A9%E5%8D%9A%E5%AE%A2%E9%80%BC%E6%A0%BC%E6%9B%B4%E9%AB%98%EF%BC%9FHexo%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
-<p>自定义你的域名</p>
-<a id="more"></a>
-<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
-<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
-<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
-<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
-<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
-<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
-<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
-<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -361,6 +335,32 @@
       </categories>
       <tags>
         <tag>计算机原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
+    <url>/2020/08/07/%E6%83%B3%E8%A6%81%E8%AE%A9%E5%8D%9A%E5%AE%A2%E9%80%BC%E6%A0%BC%E6%9B%B4%E9%AB%98%EF%BC%9FHexo%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
+<p>自定义你的域名</p>
+<a id="more"></a>
+<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
+<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
+<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
+<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
+<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
+<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
+<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
