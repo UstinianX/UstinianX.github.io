@@ -239,6 +239,55 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>内网穿透的实现</title>
+    <url>/posts/30233/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
+<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
+<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
+<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
+<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
+<p>（二）</p>
+<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
+<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
+<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
+<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
+<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>NET</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/posts/29463/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VMWare虚拟机滥用指南</title>
     <url>/posts/13907/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
@@ -270,68 +319,6 @@
       </categories>
       <tags>
         <tag>虚拟机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/posts/29463/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>珂朵莉树学习笔记</title>
-    <url>/posts/8f3914d7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>珂朵莉树</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>内网穿透的实现</title>
-    <url>/posts/30233/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
-<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
-<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
-<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
-<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
-<p>（二）</p>
-<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
-<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
-<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
-<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
-<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>NET</category>
-      </categories>
-      <tags>
-        <tag>内网穿透</tag>
       </tags>
   </entry>
   <entry>
@@ -374,6 +361,53 @@
       </categories>
       <tags>
         <tag>计算机原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>珂朵莉树学习笔记</title>
+    <url>/posts/8f3914d7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法，吊打线段树，暴踩标算，<del>迅速AK IOI</del></p>
+<p>至于我学习的原因，一是它作为一种非常牛逼的暴力算法，甚至可以$\text{AC}$某些题；二是出于信仰，据不可靠研究表明，研究科学对于OIer帮助极大极大。</p>
+<a id="more"></a>
+<h1 id="珂朵莉树是什么"><a href="#珂朵莉树是什么" class="headerlink" title="珂朵莉树是什么"></a>珂朵莉树是什么</h1><p>珂朵莉树，又称 $\text{Old Driver Tree(ODT)}$（老司机树）。</p>
+<p>由一名用户名为 $\text{Old Driver}$ 的CF用户在$\text{CF896C}$上首次使用，此人就是为你谷著名神犇、毒瘤出题者、<del>暴政</del>管理员 <font color=Purple> $\text{lxl (noip)}$ </font>。</p>
+<p>是一种基于 $\text{std::set}$ 的暴力数据结构。</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/ae2f0dc51b91178fa2196f972529e088.png" alt="差不多就是这个意思"></p>
+<h1 id="珂朵莉树的使用"><a href="#珂朵莉树的使用" class="headerlink" title="珂朵莉树的使用"></a>珂朵莉树的使用</h1><p>在数据随机的情况下使用，使一整段区间内的东西变得一样。</p>
+<h1 id="珂朵莉树的构造"><a href="#珂朵莉树的构造" class="headerlink" title="珂朵莉树的构造"></a>珂朵莉树的构造</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="built_in">set</span>&lt;Node&gt; s;</span><br></pre></td></tr></table></figure>
+<p>这是一个没有初始化的珂朵莉树。</p>
+<h1 id="珂朵莉树的初始化"><a href="#珂朵莉树的初始化" class="headerlink" title="珂朵莉树的初始化"></a>珂朵莉树的初始化</h1><p>一般来说，我们通过给定数据，向其中不断插入区间长度为1的区间来完成初始化。</p>
+<p>For example: $\text{ CF896C }$</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l, r;   <span class="comment">//范围</span></span><br><span class="line">    <span class="keyword">mutable</span> LL v;   <span class="comment">//数值</span></span><br><span class="line">    node(<span class="keyword">int</span> L, <span class="keyword">int</span> R = <span class="number">-1</span>, LL V = <span class="number">0</span>) : l(L), r(R), v(V) &#123;&#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;o) <span class="keyword">const</span>   <span class="comment">//重载运算符</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> l &lt; o.l;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>表示 $\text{ l, r }$ 这一个区间中所有的数都是$\text{v}$。</p>
+<h2 id="读入"><a href="#读入" class="headerlink" title="读入"></a>读入</h2><p>开一个$\text{set}$存$\text{Node}$，$\text{Node}$根据输入而定</p>
+<h1 id="珂朵莉树的宏定义"><a href="#珂朵莉树的宏定义" class="headerlink" title="珂朵莉树的宏定义"></a>珂朵莉树的宏定义</h1><p>更方便</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S_IT set<span class="meta-string">&lt;Node&gt;::iterator //S_IT = set_iterator</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="珂朵莉树的核心操作：-text-Split（分裂）"><a href="#珂朵莉树的核心操作：-text-Split（分裂）" class="headerlink" title="珂朵莉树的核心操作：$\text{Split（分裂）}$"></a>珂朵莉树的核心操作：$\text{Split（分裂）}$</h1><p>一个集合中，有一部分需要修改，而另一部分不需要修改，就把集合拆开，拆成两部分。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">IT <span class="title">split</span><span class="params">(<span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT it = s.lower_bound(node(pos));       <span class="comment">//找到首个不小于pos的set</span></span><br><span class="line">    <span class="keyword">if</span> (it != s.end() &amp;&amp; it-&gt;l == pos)</span><br><span class="line">    &#123;                                       <span class="comment">//无需，直接返回</span></span><br><span class="line">        <span class="keyword">return</span> it;</span><br><span class="line">    &#125;</span><br><span class="line">    --it;                                   <span class="comment">//否则一定在前一个区间中</span></span><br><span class="line">    <span class="keyword">int</span> L = it-&gt;l, R = it-&gt;r;               <span class="comment">//【l,r】就是要分裂的区间</span></span><br><span class="line">    LL V = it-&gt;v;                           <span class="comment">//取出值</span></span><br><span class="line">    s.erase(it);                            <span class="comment">//删除原集合</span></span><br><span class="line">    s.insert(node(L, pos - <span class="number">1</span>, V));          <span class="comment">//构建前半段的新结合</span></span><br><span class="line">    <span class="keyword">return</span> s.insert(node(pos, R, V)).first; <span class="comment">//构建后半段的新集合并且返回地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="珂朵莉树的推平"><a href="#珂朵莉树的推平" class="headerlink" title="珂朵莉树的推平"></a>珂朵莉树的推平</h1><p>降低复杂度，接近 ${mLog_{n}}$</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">assign_val</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">assign_val</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = split(r+<span class="number">1</span>), itr = split(l); <span class="comment">//求出要被摊平区间的收尾地址</span></span><br><span class="line">    s.erase(itl, itr);                     <span class="comment">//删除原集合</span></span><br><span class="line">    s.insert(node(l, r, val));             <span class="comment">//添加新集合</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><h2 id="区间加"><a href="#区间加" class="headerlink" title="区间加"></a>区间加</h2><p>找到对应集合暴力加</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = split(l), itr = split(r + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        itl-&gt;v += val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间第-k-小"><a href="#区间第-k-小" class="headerlink" title="区间第$k$小"></a>区间第$k$小</h2><p>把元素取出，暴力排序，暴力查找第k小（乘上集合的个数）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">LL <span class="title">rank</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;pair&lt;LL, <span class="keyword">int</span>&gt;&gt; vp;</span><br><span class="line">    IT itl = split(l), itr = split(r + <span class="number">1</span>);</span><br><span class="line">    vp.clear();</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        vp.push_back(pair&lt;LL, <span class="keyword">int</span>&gt;(itl-&gt;v, itl-&gt;r - itl-&gt;l + <span class="number">1</span>));</span><br><span class="line">    sort(vp.begin(), vp.end());</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;pair&lt;LL, <span class="keyword">int</span>&gt;&gt;::iterator it = vp.begin(); it != vp.end(); ++it)</span><br><span class="line">    &#123;</span><br><span class="line">        k -= it-&gt;second;</span><br><span class="line">        <span class="keyword">if</span> (k &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> it-&gt;first;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间幂次和"><a href="#区间幂次和" class="headerlink" title="区间幂次和"></a>区间幂次和</h2><p>暴力找到元素，快速幂，加入答案（乘上集合的个数）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">LL <span class="title">pown</span><span class="params">(LL a, LL b, LL mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL res = <span class="number">1</span>;</span><br><span class="line">    LL ans = a % mod;</span><br><span class="line">    <span class="keyword">while</span> (b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">            res = res * ans % mod;</span><br><span class="line">        ans = ans * ans % mod;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">sum</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ex, <span class="keyword">int</span> mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = split(l), itr = split(r + <span class="number">1</span>);</span><br><span class="line">    LL res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        res = (res + (LL)(itl-&gt;r - itl-&gt;l + <span class="number">1</span>) * pown(itl-&gt;v, LL(ex), LL(mod))) % mod;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考文献：</p>
+ <font size=2 color=grey>珂朵莉树详解 https://www.cnblogs.com/yzhang-rp-inf/p/9443659.html</font>
+
+
+
+</blockquote>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>珂朵莉树</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>
