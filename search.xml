@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>5053刷奥迪Q5隐藏功能</title>
+    <url>/posts/3346500/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通过使用5053数据线修改ECU，起到激活某些功能的目的</p>
+<a id="more"></a>
+<center><font color=RED size=5>警告！使用此方法更改行车电脑可能会使保修期内的汽车无法保修！</font></center>
+
+<script type="math/tex; mode=display">\text{声明：按照本文修改所造成的故障，作者概不负责}</script><hr>
+<script type="math/tex; mode=display">\text{请注意，本文中的原编码可能与实际操作时不同，请仔细研究，灵活更改}</script><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>可以自己尝试更改</li>
+<li>更改之前请先记录原编码</li>
+<li>有任何问题请到奥迪服务站进行解决</li>
+<li>在启用电池或着车的情况下操作</li>
+<li>部分功能需要重新插拔钥匙之后才能激活</li>
+<li>本文中适用的车型是 $\text{Q5 技术进取型}$ ，其他车型等以后吧</li>
+</ul>
+<h2 id="电池电量表："><a href="#电池电量表：" class="headerlink" title="电池电量表："></a>电池电量表：</h2><p>选择模块<code>(S)56</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>39</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65519</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65535</span></span><br></pre></td></tr></table></figure>
+<h2 id="锁车B一声：-扰民，不建议开启"><a href="#锁车B一声：-扰民，不建议开启" class="headerlink" title="锁车B一声：(扰民，不建议开启)"></a>锁车B一声：(扰民，不建议开启)</h2><p>选择模块<code>(S)46</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013</span>A062020B934948430053280000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013E062020</span>B934948430053280000000</span><br></pre></td></tr></table></figure>
+<h2 id="解锁B两声：-扰民，不建议开启"><a href="#解锁B两声：-扰民，不建议开启" class="headerlink" title="解锁B两声：(扰民，不建议开启)"></a>解锁B两声：(扰民，不建议开启)</h2><p>选择<code>模块(S)46</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>63</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">40</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">44</span></span><br></pre></td></tr></table></figure>
+<h2 id="背景照明亮度："><a href="#背景照明亮度：" class="headerlink" title="背景照明亮度："></a>背景照明亮度：</h2><h3 id="①-选择模块-S-09-gt-确定-gt-编码控制-C-07"><a href="#①-选择模块-S-09-gt-确定-gt-编码控制-C-07" class="headerlink" title="① 选择模块(S)09 -&gt; 确定 -&gt; 编码控制(C)-07"></a>① 选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D0F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<h3 id="②-选择模块-S-56-gt-编码控制-C-07"><a href="#②-选择模块-S-56-gt-编码控制-C-07" class="headerlink" title="② 选择模块(S)56 -&gt; 编码控制(C)-07"></a>② 选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500035B070000</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
+<h2 id="胎压监测："><a href="#胎压监测：" class="headerlink" title="胎压监测："></a>胎压监测：</h2><p>选择<code>模块(S)03</code> -&gt; 确定 -&gt; <code>允许进入16</code> （这时仪表中的胎压故障报警，正常）-&gt; 输入允许进入密钥(0-99999):填写入<code>61378</code> -&gt; 执行 -&gt; 进入<code>编码控制(C)-07</code> -&gt; 点击<code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节1(Byte 1)</code>将<code>55</code>直接改为<code>5D</code> -&gt; <code>退出</code> -&gt; <code>执行</code> -&gt; 再进入选择<code>模块(S)56</code> -&gt; 确定 -&gt; 点<code>编码控制(C)-07</code> -&gt; <code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节8</code> -&gt; 将<code>Bit 6</code>直接打上勾 -&gt; 退出 -&gt; 执行.</p>
+<h2 id="倒车时右侧反光镜自动下调："><a href="#倒车时右侧反光镜自动下调：" class="headerlink" title="倒车时右侧反光镜自动下调："></a>倒车时右侧反光镜自动下调：</h2><p>首先前提是要将左门上的调节反光镜开关拧到右边。右边的反光镜下调后不会自动收回到初始状态,必须车速达到<code>15KM/h</code>以上才自动收回到初始状态。选择<code>模块(S)52</code> -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205000440004</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205400440004</span><br></pre></td></tr></table></figure>
+<h2 id="高速刹车自动双闪警示灯："><a href="#高速刹车自动双闪警示灯：" class="headerlink" title="高速刹车自动双闪警示灯："></a>高速刹车自动双闪警示灯：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010101000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<h2 id="LED灯亮度调节："><a href="#LED灯亮度调节：" class="headerlink" title="LED灯亮度调节："></a>LED灯亮度调节：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>允许进入(S)16</code> -&gt; 在输入允许进入密钥(0-99999):填写入<code>20113</code> -&gt; <code>执行</code> -&gt; 弹出一个对话框意思是”允许进入已接受”点击确定 -&gt; <code>匹配10</code> -&gt; 通道<code>03</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">50</span></span><br></pre></td></tr></table></figure>
+<h2 id="刷开机画面的-text-RS-："><a href="#刷开机画面的-text-RS-：" class="headerlink" title="刷开机画面的$\text{RS}$："></a>刷开机画面的$\text{RS}$：</h2><p>选择<code>模块(S)56</code> -&gt; 确定 -&gt; <code>编码控制(c)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
+<h2 id="调节自动大灯感应灵敏度与雨刷感应灵敏度："><a href="#调节自动大灯感应灵敏度与雨刷感应灵敏度：" class="headerlink" title="调节自动大灯感应灵敏度与雨刷感应灵敏度："></a>调节自动大灯感应灵敏度与雨刷感应灵敏度：</h2><p>选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; 在组件下拉框中选择第3项，即<code>RLS(Rain &amp; Light Sensor的缩写)</code></p>
+<p>如果无法下拉，我也没办法</p>
+<p><strong>含义：</strong></p>
+<ul>
+<li>第一组02代表感应器的选项：<ul>
+<li>Bit0代表开启高速自动大灯，</li>
+<li>Bit1代表开启下雨自动大灯，</li>
+<li>Bit2代表开启下雨自动关窗。</li>
+</ul>
+</li>
+<li>第二组4D代表光线传感器灵敏度，是十六进制，转化为十进制表示灵敏度是77%。</li>
+<li>第三组25代表雨量传感器灵敏度，是十六进制，转化为十进制表示灵敏度是37%。</li>
+</ul>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">024</span>D25</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">061032</span></span><br></pre></td></tr></table></figure>
+<p>（即开启下雨自动大灯，开启下雨自动关窗，光线传感器灵敏度调整为16%，雨量传感器灵敏度调整为50%）</p>
+<h2 id="驻车通风加热系统："><a href="#驻车通风加热系统：" class="headerlink" title="驻车通风加热系统："></a>驻车通风加热系统：</h2><h3 id="①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"><a href="#①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。" class="headerlink" title="①选择模块(S)56 -&gt; 编码控制(C)-07 -&gt; Byte 8中的Bit 2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"></a>①选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; <code>Byte 8</code>中的<code>Bit 2</code>打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。</h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C75B070002</span><br></pre></td></tr></table></figure>
+<h3 id="②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"><a href="#②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。" class="headerlink" title="②选择模块(S)08 -&gt; 编码控制(C)-07 -&gt; 把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"></a>②选择<code>模块(S)08</code> -&gt; <code>编码控制(C)-07</code> -&gt; 把<code>64016000</code>改成<code>64096000</code>（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。</h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64016000</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64096000</span></span><br></pre></td></tr></table></figure>
+<h3 id="③选择模块-S-08-gt-匹配10-gt-通道06"><a href="#③选择模块-S-08-gt-匹配10-gt-通道06" class="headerlink" title="③选择模块(S)08 -&gt; 匹配10 -&gt; 通道06"></a>③选择<code>模块(S)08</code> -&gt; <code>匹配10</code> -&gt; 通道<code>06</code></h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<font size=2>参考文献
+- http://www.xcar.com.cn/bbs/viewthread.php?tid=17536192 </font>
+
+</blockquote>
+]]></content>
+      <categories>
+        <category>汽车</category>
+      </categories>
+      <tags>
+        <tag>汽车</tag>
+        <tag>奥迪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/posts/4724/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/posts/54834/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -180,25 +306,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/posts/4724/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hexo博客添加背景音乐</title>
@@ -239,55 +358,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>内网穿透的实现</title>
-    <url>/posts/30233/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
-<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
-<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
-<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
-<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
-<p>（二）</p>
-<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
-<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
-<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
-<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
-<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>NET</category>
-      </categories>
-      <tags>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/posts/29463/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VMWare虚拟机滥用指南</title>
     <url>/posts/13907/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
@@ -319,6 +389,19 @@
       </categories>
       <tags>
         <tag>虚拟机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/posts/29463/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>
@@ -364,11 +447,42 @@
       </tags>
   </entry>
   <entry>
+    <title>内网穿透的实现</title>
+    <url>/posts/30233/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
+<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
+<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
+<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
+<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
+<p>（二）</p>
+<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
+<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
+<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
+<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
+<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>NET</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>珂朵莉树学习笔记</title>
     <url>/posts/8f3914d7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法，吊打线段树，暴踩标算，<del>迅速AK IOI</del></p>
 <p>至于我学习的原因，一是它作为一种非常牛逼的暴力算法，甚至可以$\text{AC}$某些题；二是出于信仰，据不可靠研究表明，研究科学对于OIer帮助极大极大。</p>
 <a id="more"></a>
+<hr>
+<p>总结一下，珂朵莉树分为4个部分</p>
+<ul>
+<li>构造</li>
+<li>初始化</li>
+<li>Split（分裂）</li>
+<li>推平</li>
+</ul>
+<hr>
 <h1 id="珂朵莉树是什么"><a href="#珂朵莉树是什么" class="headerlink" title="珂朵莉树是什么"></a>珂朵莉树是什么</h1><p>珂朵莉树，又称 $\text{Old Driver Tree(ODT)}$（老司机树）。</p>
 <p>由一名用户名为 $\text{Old Driver}$ 的CF用户在$\text{CF896C}$上首次使用，此人就是为你谷著名神犇、毒瘤出题者、<del>暴政</del>管理员 <font color=Purple> $\text{lxl (noip)}$ </font>。</p>
 <p>是一种基于 $\text{std::set}$ 的暴力数据结构。</p>
