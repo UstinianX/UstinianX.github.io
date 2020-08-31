@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ustinianx.com/"/>
-  <updated>2020-08-28T02:58:49.569Z</updated>
+  <updated>2020-08-31T08:06:45.834Z</updated>
   <id>https://ustinianx.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P5662 纪念品 &amp; CSP-J 2019 T3</title>
+    <link href="https://ustinianx.com/posts/385aaf63/"/>
+    <id>https://ustinianx.com/posts/385aaf63/</id>
+    <published>2020-08-31T07:24:31.694Z</published>
+    <updated>2020-08-31T08:06:45.834Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>距离去年的$\text{CSP-J}$也快一年了，2020的第二轮还有74天。今天做题的时候正巧碰到这个题，就再来写一波题解</p><a id="more"></a><p>这是一道完全背包的题，我们进行 $t-1$ 轮完全背包:</p><ul><li><p>把今天<strong>手里的钱</strong>当做背包的<strong>容量</strong>，</p></li><li><p>把商品<strong>今天的价格</strong>当成它的<strong>消耗</strong>,</p></li><li><p>把商品<strong>明天的价格</strong>当做它的<strong>价值</strong>，</p></li><li><p>每一天结束后把<strong>总钱数加上今天赚的钱</strong>，直接写背包模板即可。</p></li></ul><p>在这道题中，我们可以把商品和钱看成同样的东西，因为题目中说了：可以<strong>当天买当天卖</strong>，所以不必考虑跨天的买卖，只需<strong>考虑当天</strong>的即可，这满足动态规划对于最优化原理和无后效性的要求，可以大胆地购买。</p><p>定义： $f[i]$为用 $i$ 元钱去购买商品所能盈利的最大值（不含成本）</p><p>转移方程： $f[j]=max(f[j],f[j−price[i][k]]+price[i][k+1]−price[i][k])$</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 101</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> M 10010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, m, t, p[N][N], sum[M];</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= t; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; p[j][i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; t; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(sum, <span class="number">0</span>, <span class="keyword">sizeof</span> sum);  <span class="comment">//每轮开始前制零</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = p[j][i]; k &lt;= m; k++)  <span class="comment">//完全背包,正循环</span></span><br><span class="line">            &#123;</span><br><span class="line">                sum[k] = max(sum[k], sum[k - p[j][i]] + p[j][i + <span class="number">1</span>] - p[j][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m += sum[m];  <span class="comment">//加上盈利的钱</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;距离去年的$\text{CSP-J}$也快一年了，2020的第二轮还有74天。今天做题的时候正巧碰到这个题，就再来写一波题解&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://ustinianx.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="背包" scheme="https://ustinianx.com/categories/%E7%AE%97%E6%B3%95/%E8%83%8C%E5%8C%85/"/>
+    
+      <category term="动态规划" scheme="https://ustinianx.com/categories/%E7%AE%97%E6%B3%95/%E8%83%8C%E5%8C%85/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="题解" scheme="https://ustinianx.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+      <category term="CSP-J 2019" scheme="https://ustinianx.com/tags/CSP-J-2019/"/>
+    
+      <category term="动态规划" scheme="https://ustinianx.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="完全背包" scheme="https://ustinianx.com/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>5053刷奥迪Q5隐藏功能</title>
