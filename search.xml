@@ -1,108 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>5053刷奥迪Q5隐藏功能</title>
-    <url>/posts/5053-Q5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通过使用5053数据线修改ECU，起到激活某些功能的目的</p>
-<a id="more"></a>
-<center><font color=RED size=5>警告！使用此方法更改行车电脑可能会使保修期内的汽车无法保修！</font></center>
-
-<script type="math/tex; mode=display">\text{声明：按照本文修改所造成的故障，作者概不负责}</script><hr>
-<script type="math/tex; mode=display">\text{请注意，本文中的原编码可能与实际操作时不同，请仔细研究，灵活更改}</script><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>可以自己尝试更改</li>
-<li>更改之前请先记录原编码</li>
-<li>有任何问题请到奥迪服务站进行解决</li>
-<li>在启用电池或着车的情况下操作</li>
-<li>部分功能需要重新插拔钥匙之后才能激活</li>
-<li>本文中适用的车型是 $\text{Q5 技术进取型}$ ，其他车型等以后吧</li>
-</ul>
-<h2 id="电池电量表："><a href="#电池电量表：" class="headerlink" title="电池电量表："></a>电池电量表：</h2><p>选择模块<code>(S)56</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>39</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65519</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65535</span></span><br></pre></td></tr></table></figure>
-<h2 id="锁车B一声：-扰民，不建议开启"><a href="#锁车B一声：-扰民，不建议开启" class="headerlink" title="锁车B一声：(扰民，不建议开启)"></a>锁车B一声：(扰民，不建议开启)</h2><p>选择模块<code>(S)46</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013</span>A062020B934948430053280000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013E062020</span>B934948430053280000000</span><br></pre></td></tr></table></figure>
-<h2 id="解锁B两声：-扰民，不建议开启"><a href="#解锁B两声：-扰民，不建议开启" class="headerlink" title="解锁B两声：(扰民，不建议开启)"></a>解锁B两声：(扰民，不建议开启)</h2><p>选择<code>模块(S)46</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>63</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">40</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">44</span></span><br></pre></td></tr></table></figure>
-<h2 id="背景照明亮度："><a href="#背景照明亮度：" class="headerlink" title="背景照明亮度："></a>背景照明亮度：</h2><h3 id="①-选择模块-S-09-gt-确定-gt-编码控制-C-07"><a href="#①-选择模块-S-09-gt-确定-gt-编码控制-C-07" class="headerlink" title="① 选择模块(S)09 -&gt; 确定 -&gt; 编码控制(C)-07"></a>① 选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D0F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<h3 id="②-选择模块-S-56-gt-编码控制-C-07"><a href="#②-选择模块-S-56-gt-编码控制-C-07" class="headerlink" title="② 选择模块(S)56 -&gt; 编码控制(C)-07"></a>② 选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500035B070000</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
-<h2 id="胎压监测："><a href="#胎压监测：" class="headerlink" title="胎压监测："></a>胎压监测：</h2><p>选择<code>模块(S)03</code> -&gt; 确定 -&gt; <code>允许进入16</code> （这时仪表中的胎压故障报警，正常）-&gt; 输入允许进入密钥(0-99999):填写入<code>61378</code> -&gt; 执行 -&gt; 进入<code>编码控制(C)-07</code> -&gt; 点击<code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节1(Byte 1)</code>将<code>55</code>直接改为<code>5D</code> -&gt; <code>退出</code> -&gt; <code>执行</code> -&gt; 再进入选择<code>模块(S)56</code> -&gt; 确定 -&gt; 点<code>编码控制(C)-07</code> -&gt; <code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节8</code> -&gt; 将<code>Bit 6</code>直接打上勾 -&gt; 退出 -&gt; 执行.</p>
-<h2 id="倒车时右侧反光镜自动下调："><a href="#倒车时右侧反光镜自动下调：" class="headerlink" title="倒车时右侧反光镜自动下调："></a>倒车时右侧反光镜自动下调：</h2><p>首先前提是要将左门上的调节反光镜开关拧到右边。右边的反光镜下调后不会自动收回到初始状态,必须车速达到<code>15KM/h</code>以上才自动收回到初始状态。选择<code>模块(S)52</code> -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205000440004</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205400440004</span><br></pre></td></tr></table></figure>
-<h2 id="高速刹车自动双闪警示灯："><a href="#高速刹车自动双闪警示灯：" class="headerlink" title="高速刹车自动双闪警示灯："></a>高速刹车自动双闪警示灯：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010101000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<h2 id="LED灯亮度调节："><a href="#LED灯亮度调节：" class="headerlink" title="LED灯亮度调节："></a>LED灯亮度调节：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>允许进入(S)16</code> -&gt; 在输入允许进入密钥(0-99999):填写入<code>20113</code> -&gt; <code>执行</code> -&gt; 弹出一个对话框意思是”允许进入已接受”点击确定 -&gt; <code>匹配10</code> -&gt; 通道<code>03</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">50</span></span><br></pre></td></tr></table></figure>
-<h2 id="刷开机画面的-text-RS-："><a href="#刷开机画面的-text-RS-：" class="headerlink" title="刷开机画面的$\text{RS}$："></a>刷开机画面的$\text{RS}$：</h2><p>选择<code>模块(S)56</code> -&gt; 确定 -&gt; <code>编码控制(c)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
-<h2 id="调节自动大灯感应灵敏度与雨刷感应灵敏度："><a href="#调节自动大灯感应灵敏度与雨刷感应灵敏度：" class="headerlink" title="调节自动大灯感应灵敏度与雨刷感应灵敏度："></a>调节自动大灯感应灵敏度与雨刷感应灵敏度：</h2><p>选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; 在组件下拉框中选择第3项，即<code>RLS(Rain &amp; Light Sensor的缩写)</code></p>
-<p>如果无法下拉，我也没办法</p>
-<p><strong>含义：</strong></p>
-<ul>
-<li>第一组02代表感应器的选项：<ul>
-<li>Bit0代表开启高速自动大灯，</li>
-<li>Bit1代表开启下雨自动大灯，</li>
-<li>Bit2代表开启下雨自动关窗。</li>
-</ul>
-</li>
-<li>第二组4D代表光线传感器灵敏度，是十六进制，转化为十进制表示灵敏度是77%。</li>
-<li>第三组25代表雨量传感器灵敏度，是十六进制，转化为十进制表示灵敏度是37%。</li>
-</ul>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">024</span>D25</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">061032</span></span><br></pre></td></tr></table></figure>
-<p>（即开启下雨自动大灯，开启下雨自动关窗，光线传感器灵敏度调整为16%，雨量传感器灵敏度调整为50%）</p>
-<h2 id="驻车通风加热系统："><a href="#驻车通风加热系统：" class="headerlink" title="驻车通风加热系统："></a>驻车通风加热系统：</h2><h3 id="①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"><a href="#①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。" class="headerlink" title="①选择模块(S)56 -&gt; 编码控制(C)-07 -&gt; Byte 8中的Bit 2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"></a>①选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; <code>Byte 8</code>中的<code>Bit 2</code>打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。</h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C75B070002</span><br></pre></td></tr></table></figure>
-<h3 id="②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"><a href="#②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。" class="headerlink" title="②选择模块(S)08 -&gt; 编码控制(C)-07 -&gt; 把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"></a>②选择<code>模块(S)08</code> -&gt; <code>编码控制(C)-07</code> -&gt; 把<code>64016000</code>改成<code>64096000</code>（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。</h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64016000</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64096000</span></span><br></pre></td></tr></table></figure>
-<h3 id="③选择模块-S-08-gt-匹配10-gt-通道06"><a href="#③选择模块-S-08-gt-匹配10-gt-通道06" class="headerlink" title="③选择模块(S)08 -&gt; 匹配10 -&gt; 通道06"></a>③选择<code>模块(S)08</code> -&gt; <code>匹配10</code> -&gt; 通道<code>06</code></h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<font size=2>参考文献
-- http://www.xcar.com.cn/bbs/viewthread.php?tid=17536192 </font>
-
-</blockquote>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/posts/Hexo-RSS/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
 ]]></content>
       <categories>
-        <category>汽车</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>汽车</tag>
-        <tag>奥迪</tag>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
       </tags>
   </entry>
   <entry>
@@ -271,24 +187,122 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/posts/Hexo-RSS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+    <title>5053刷奥迪Q5隐藏功能</title>
+    <url>/posts/5053-Q5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通过使用5053数据线修改ECU，起到激活某些功能的目的</p>
+<a id="more"></a>
+<center><font color=RED size=5>警告！使用此方法更改行车电脑可能会使保修期内的汽车无法保修！</font></center>
+
+<script type="math/tex; mode=display">\text{声明：按照本文修改所造成的故障，作者概不负责}</script><hr>
+<script type="math/tex; mode=display">\text{请注意，本文中的原编码可能与实际操作时不同，请仔细研究，灵活更改}</script><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>可以自己尝试更改</li>
+<li>更改之前请先记录原编码</li>
+<li>有任何问题请到奥迪服务站进行解决</li>
+<li>在启用电池或着车的情况下操作</li>
+<li>部分功能需要重新插拔钥匙之后才能激活</li>
+<li>本文中适用的车型是 $\text{Q5 技术进取型}$ ，其他车型等以后吧</li>
+</ul>
+<h2 id="电池电量表："><a href="#电池电量表：" class="headerlink" title="电池电量表："></a>电池电量表：</h2><p>选择模块<code>(S)56</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>39</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65519</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65535</span></span><br></pre></td></tr></table></figure>
+<h2 id="锁车B一声：-扰民，不建议开启"><a href="#锁车B一声：-扰民，不建议开启" class="headerlink" title="锁车B一声：(扰民，不建议开启)"></a>锁车B一声：(扰民，不建议开启)</h2><p>选择模块<code>(S)46</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013</span>A062020B934948430053280000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013E062020</span>B934948430053280000000</span><br></pre></td></tr></table></figure>
+<h2 id="解锁B两声：-扰民，不建议开启"><a href="#解锁B两声：-扰民，不建议开启" class="headerlink" title="解锁B两声：(扰民，不建议开启)"></a>解锁B两声：(扰民，不建议开启)</h2><p>选择<code>模块(S)46</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>63</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">40</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">44</span></span><br></pre></td></tr></table></figure>
+<h2 id="背景照明亮度："><a href="#背景照明亮度：" class="headerlink" title="背景照明亮度："></a>背景照明亮度：</h2><h3 id="①-选择模块-S-09-gt-确定-gt-编码控制-C-07"><a href="#①-选择模块-S-09-gt-确定-gt-编码控制-C-07" class="headerlink" title="① 选择模块(S)09 -&gt; 确定 -&gt; 编码控制(C)-07"></a>① 选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D0F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<h3 id="②-选择模块-S-56-gt-编码控制-C-07"><a href="#②-选择模块-S-56-gt-编码控制-C-07" class="headerlink" title="② 选择模块(S)56 -&gt; 编码控制(C)-07"></a>② 选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500035B070000</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
+<h2 id="胎压监测："><a href="#胎压监测：" class="headerlink" title="胎压监测："></a>胎压监测：</h2><p>选择<code>模块(S)03</code> -&gt; 确定 -&gt; <code>允许进入16</code> （这时仪表中的胎压故障报警，正常）-&gt; 输入允许进入密钥(0-99999):填写入<code>61378</code> -&gt; 执行 -&gt; 进入<code>编码控制(C)-07</code> -&gt; 点击<code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节1(Byte 1)</code>将<code>55</code>直接改为<code>5D</code> -&gt; <code>退出</code> -&gt; <code>执行</code> -&gt; 再进入选择<code>模块(S)56</code> -&gt; 确定 -&gt; 点<code>编码控制(C)-07</code> -&gt; <code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节8</code> -&gt; 将<code>Bit 6</code>直接打上勾 -&gt; 退出 -&gt; 执行.</p>
+<h2 id="倒车时右侧反光镜自动下调："><a href="#倒车时右侧反光镜自动下调：" class="headerlink" title="倒车时右侧反光镜自动下调："></a>倒车时右侧反光镜自动下调：</h2><p>首先前提是要将左门上的调节反光镜开关拧到右边。右边的反光镜下调后不会自动收回到初始状态,必须车速达到<code>15KM/h</code>以上才自动收回到初始状态。选择<code>模块(S)52</code> -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205000440004</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205400440004</span><br></pre></td></tr></table></figure>
+<h2 id="高速刹车自动双闪警示灯："><a href="#高速刹车自动双闪警示灯：" class="headerlink" title="高速刹车自动双闪警示灯："></a>高速刹车自动双闪警示灯：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010101000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
+<h2 id="LED灯亮度调节："><a href="#LED灯亮度调节：" class="headerlink" title="LED灯亮度调节："></a>LED灯亮度调节：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>允许进入(S)16</code> -&gt; 在输入允许进入密钥(0-99999):填写入<code>20113</code> -&gt; <code>执行</code> -&gt; 弹出一个对话框意思是”允许进入已接受”点击确定 -&gt; <code>匹配10</code> -&gt; 通道<code>03</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">50</span></span><br></pre></td></tr></table></figure>
+<h2 id="刷开机画面的-text-RS-："><a href="#刷开机画面的-text-RS-：" class="headerlink" title="刷开机画面的$\text{RS}$："></a>刷开机画面的$\text{RS}$：</h2><p>选择<code>模块(S)56</code> -&gt; 确定 -&gt; <code>编码控制(c)-07</code></p>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
+<h2 id="调节自动大灯感应灵敏度与雨刷感应灵敏度："><a href="#调节自动大灯感应灵敏度与雨刷感应灵敏度：" class="headerlink" title="调节自动大灯感应灵敏度与雨刷感应灵敏度："></a>调节自动大灯感应灵敏度与雨刷感应灵敏度：</h2><p>选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; 在组件下拉框中选择第3项，即<code>RLS(Rain &amp; Light Sensor的缩写)</code></p>
+<p>如果无法下拉，我也没办法</p>
+<p><strong>含义：</strong></p>
+<ul>
+<li>第一组02代表感应器的选项：<ul>
+<li>Bit0代表开启高速自动大灯，</li>
+<li>Bit1代表开启下雨自动大灯，</li>
+<li>Bit2代表开启下雨自动关窗。</li>
+</ul>
+</li>
+<li>第二组4D代表光线传感器灵敏度，是十六进制，转化为十进制表示灵敏度是77%。</li>
+<li>第三组25代表雨量传感器灵敏度，是十六进制，转化为十进制表示灵敏度是37%。</li>
+</ul>
+<p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">024</span>D25</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">061032</span></span><br></pre></td></tr></table></figure>
+<p>（即开启下雨自动大灯，开启下雨自动关窗，光线传感器灵敏度调整为16%，雨量传感器灵敏度调整为50%）</p>
+<h2 id="驻车通风加热系统："><a href="#驻车通风加热系统：" class="headerlink" title="驻车通风加热系统："></a>驻车通风加热系统：</h2><h3 id="①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"><a href="#①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。" class="headerlink" title="①选择模块(S)56 -&gt; 编码控制(C)-07 -&gt; Byte 8中的Bit 2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"></a>①选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; <code>Byte 8</code>中的<code>Bit 2</code>打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。</h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C75B070002</span><br></pre></td></tr></table></figure>
+<h3 id="②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"><a href="#②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。" class="headerlink" title="②选择模块(S)08 -&gt; 编码控制(C)-07 -&gt; 把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"></a>②选择<code>模块(S)08</code> -&gt; <code>编码控制(C)-07</code> -&gt; 把<code>64016000</code>改成<code>64096000</code>（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。</h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64016000</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64096000</span></span><br></pre></td></tr></table></figure>
+<h3 id="③选择模块-S-08-gt-匹配10-gt-通道06"><a href="#③选择模块-S-08-gt-匹配10-gt-通道06" class="headerlink" title="③选择模块(S)08 -&gt; 匹配10 -&gt; 通道06"></a>③选择<code>模块(S)08</code> -&gt; <code>匹配10</code> -&gt; 通道<code>06</code></h3><p>原编码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<font size=2>参考文献
+- http://www.xcar.com.cn/bbs/viewthread.php?tid=17536192 </font>
+
+</blockquote>
 ]]></content>
+      <categories>
+        <category>汽车</category>
+      </categories>
+      <tags>
+        <tag>汽车</tag>
+        <tag>奥迪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/posts/Hexo-rate/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>RSS</tag>
       </tags>
   </entry>
   <entry>
@@ -327,54 +341,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/posts/Hexo-rate/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VMWare虚拟机滥用指南</title>
-    <url>/posts/VMWare/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
-<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
-<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
-<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
-<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
-<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
-<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
-<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
-<p>选择文件</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
-<p>自行设置</p>
-<p>用户名和密码将会是Linux系统的用户名和密码</p>
-<p>下面自行设置就好了</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
-<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
-<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
-<p>默认的SCSI就没有问题</p>
-<p>这些都是硬盘接口</p>
-<p>IDE最慢，NVMe最快</p>
-<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
-<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
-<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -435,6 +401,7 @@
 <p>看了洛谷大佬<a href="https://www.luogu.com.cn/user/191252" target="_blank" rel="noopener">@Happy_86868686</a>的<a href="https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660" target="_blank" rel="noopener">题解</a>，我整个人都震惊了</p>
 <p>%%%%%%%%%</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;f;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;f%<span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 <blockquote>
 <p>参考资料</p>
 <font size=2>https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660</font></blockquote>
@@ -451,16 +418,37 @@
       </tags>
   </entry>
   <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/posts/yi-ben-tong-1332/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>VMWare虚拟机滥用指南</title>
+    <url>/posts/VMWare/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
+<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
+<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
+<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
+<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
+<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
+<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
+<p>选择文件</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
+<p>自行设置</p>
+<p>用户名和密码将会是Linux系统的用户名和密码</p>
+<p>下面自行设置就好了</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
+<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
+<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
+<p>默认的SCSI就没有问题</p>
+<p>这些都是硬盘接口</p>
+<p>IDE最慢，NVMe最快</p>
+<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
+<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
+<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
 ]]></content>
       <categories>
-        <category>题解</category>
+        <category>Software</category>
       </categories>
       <tags>
-        <tag>一本通</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -509,6 +497,19 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/posts/yi-ben-tong-1332/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>
