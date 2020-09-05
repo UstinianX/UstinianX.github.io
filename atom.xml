@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ustinianx.com/"/>
-  <updated>2020-08-31T15:07:09.425Z</updated>
+  <updated>2020-09-05T10:19:48.202Z</updated>
   <id>https://ustinianx.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++实用函数</title>
+    <link href="https://ustinianx.com/posts/C++-Pragmatic-Function/"/>
+    <id>https://ustinianx.com/posts/C++-Pragmatic-Function/</id>
+    <published>2020-09-05T09:37:22.508Z</published>
+    <updated>2020-09-05T10:19:48.202Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p><p>这样一来，在省下了时间的同时，还可以保证正确性</p><a id="more"></a><center><font size=4 color=red>持续更新</font></center><hr><ol><li><p>__gcd ( x, y )</p><p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p></li><li><p>reverse ( a+1, a+n+1 )</p><p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p></li><li><p>unique ( a+1, a+n+1 ) </p><p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p></li><li><p>lower_bound ( a+1, a+n+1, x )</p><p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p></li><li><p>upper_bound ( a+1, a+n+1, x )</p><p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p><p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p></li><li><p>fill ( a+1, a+n+1, x )</p><p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p></li><li><p>sort ( a, a+1+n, cmp )</p><p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p><p> $\text{cmp}$模板</p> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>qsort</p><p> 进行快速排序，用法与$\text{sort}$相同。</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有些复杂的程序，往往可以用C++函数库里的函数代替&lt;/p&gt;
+&lt;p&gt;这样一来，在省下了时间的同时，还可以保证正确性&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="函数" scheme="https://ustinianx.com/categories/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="C++" scheme="https://ustinianx.com/categories/%E5%87%BD%E6%95%B0/C/"/>
+    
+    
+      <category term="函数" scheme="https://ustinianx.com/tags/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="C++" scheme="https://ustinianx.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>P5660 数字游戏 &amp; CSP-J 2019 T1</title>
