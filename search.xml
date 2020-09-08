@@ -106,6 +106,88 @@
       </tags>
   </entry>
   <entry>
+    <title>C++实用函数</title>
+    <url>/posts/C++-Pragmatic-Function/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
+<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
+<a id="more"></a>
+<center><font size=4 color=red>持续更新</font></center>
+
+<hr>
+<ol>
+<li><p>__gcd ( x, y )</p>
+<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
+</li>
+<li><p>reverse ( a+1, a+n+1 )</p>
+<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
+</li>
+<li><p>unique ( a+1, a+n+1 ) </p>
+<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
+</li>
+<li><p>lower_bound ( a+1, a+n+1, x )</p>
+<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
+</li>
+<li><p>upper_bound ( a+1, a+n+1, x )</p>
+<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
+<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
+</li>
+<li><p>fill ( a+1, a+n+1, x )</p>
+<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
+</li>
+<li><p>sort ( a, a+1+n, cmp )</p>
+<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
+<p> $\text{cmp}$模板</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>qsort</p>
+<p> 进行快速排序，用法与$\text{sort}$相同。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>函数</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>函数</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/posts/Hexo-RSS/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/posts/Hexo-rate/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/posts/Hexo/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -271,74 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++实用函数</title>
-    <url>/posts/C++-Pragmatic-Function/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
-<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
-<a id="more"></a>
-<center><font size=4 color=red>持续更新</font></center>
-
-<hr>
-<ol>
-<li><p>__gcd ( x, y )</p>
-<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
-</li>
-<li><p>reverse ( a+1, a+n+1 )</p>
-<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
-</li>
-<li><p>unique ( a+1, a+n+1 ) </p>
-<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
-</li>
-<li><p>lower_bound ( a+1, a+n+1, x )</p>
-<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
-</li>
-<li><p>upper_bound ( a+1, a+n+1, x )</p>
-<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
-<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
-</li>
-<li><p>fill ( a+1, a+n+1, x )</p>
-<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
-</li>
-<li><p>sort ( a, a+1+n, cmp )</p>
-<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
-<p> $\text{cmp}$模板</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>qsort</p>
-<p> 进行快速排序，用法与$\text{sort}$相同。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>函数</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/posts/Hexo-RSS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客添加背景音乐</title>
     <url>/posts/Hexo-Background/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
@@ -369,20 +383,6 @@
 <p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% meting <span class="string">"7634442256"</span> <span class="string">"tencent"</span> <span class="string">"playlist"</span> <span class="string">"theme:#FF4081"</span> <span class="string">"mode:circulation"</span> <span class="string">"mutex:true"</span> <span class="string">"listmaxheight:340px"</span> <span class="string">"preload:auto"</span> %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
 <h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
 ]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/posts/Hexo-rate/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -499,19 +499,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/posts/yi-ben-tong-1332/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>一本通</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>想要让博客逼格更高？Hexo绑定个人域名</title>
     <url>/posts/Hexo-Domain/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
@@ -538,6 +525,35 @@
       </tags>
   </entry>
   <entry>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/posts/yi-ben-tong-1332/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/posts/4683/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>内网穿透的实现</title>
     <url>/posts/Intranet-Penetration/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
@@ -557,22 +573,6 @@
       </categories>
       <tags>
         <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/posts/4683/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
       </tags>
   </entry>
   <entry>
