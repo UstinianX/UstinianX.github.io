@@ -106,6 +106,53 @@
       </tags>
   </entry>
   <entry>
+    <title>C++实用函数</title>
+    <url>/posts/C++-Pragmatic-Function/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
+<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
+<a id="more"></a>
+<center><font size=4 color=red>持续更新</font></center>
+
+<hr>
+<ol>
+<li><p>__gcd ( x, y )</p>
+<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
+</li>
+<li><p>reverse ( a+1, a+n+1 )</p>
+<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
+</li>
+<li><p>unique ( a+1, a+n+1 ) </p>
+<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
+</li>
+<li><p>lower_bound ( a+1, a+n+1, x )</p>
+<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
+</li>
+<li><p>upper_bound ( a+1, a+n+1, x )</p>
+<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
+<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
+</li>
+<li><p>fill ( a+1, a+n+1, x )</p>
+<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
+</li>
+<li><p>sort ( a, a+1+n, cmp )</p>
+<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
+<p> $\text{cmp}$模板</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>qsort</p>
+<p> 进行快速排序，用法与$\text{sort}$相同。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>函数</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>函数</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++发声函数 (Beep)</title>
     <url>/posts/Beep-Function/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在洛谷偶然看到了一篇帖子，了解到了这个东西，粗略的研究了一番</p>
@@ -303,67 +350,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/posts/Hexo-rate/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++实用函数</title>
-    <url>/posts/C++-Pragmatic-Function/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
-<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
-<a id="more"></a>
-<center><font size=4 color=red>持续更新</font></center>
-
-<hr>
-<ol>
-<li><p>__gcd ( x, y )</p>
-<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
-</li>
-<li><p>reverse ( a+1, a+n+1 )</p>
-<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
-</li>
-<li><p>unique ( a+1, a+n+1 ) </p>
-<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
-</li>
-<li><p>lower_bound ( a+1, a+n+1, x )</p>
-<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
-</li>
-<li><p>upper_bound ( a+1, a+n+1, x )</p>
-<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
-<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
-</li>
-<li><p>fill ( a+1, a+n+1, x )</p>
-<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
-</li>
-<li><p>sort ( a, a+1+n, cmp )</p>
-<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
-<p> $\text{cmp}$模板</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>qsort</p>
-<p> 进行快速排序，用法与$\text{sort}$相同。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>函数</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客添加RSS订阅功能</title>
     <url>/posts/Hexo-RSS/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
@@ -382,6 +368,20 @@
       <tags>
         <tag>Hexo</tag>
         <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/posts/Hexo-rate/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -483,20 +483,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/Hello-World/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>VMWare虚拟机滥用指南</title>
     <url>/posts/VMWare/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
@@ -531,6 +517,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/Hello-World/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>一本通1332：【例2-1】周末舞会 题解</title>
     <url>/posts/yi-ben-tong-1332/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
@@ -541,6 +541,48 @@
       </categories>
       <tags>
         <tag>一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
+    <url>/posts/Hexo-Domain/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
+<p>自定义你的域名</p>
+<a id="more"></a>
+<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
+<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
+<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
+<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
+<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
+<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
+<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/posts/4683/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
       </tags>
   </entry>
   <entry>
@@ -563,22 +605,6 @@
       </categories>
       <tags>
         <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/posts/4683/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
       </tags>
   </entry>
   <entry>
@@ -647,32 +673,6 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
-    <url>/posts/Hexo-Domain/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
-<p>自定义你的域名</p>
-<a id="more"></a>
-<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
-<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
-<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
-<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
-<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
-<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
-<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
-<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
