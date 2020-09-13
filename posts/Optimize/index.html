@@ -91,7 +91,7 @@
 
 
 
-  <meta name="keywords" content="函数,C++," />
+  <meta name="keywords" content="优化," />
 
 
 
@@ -104,18 +104,19 @@
 
 
 
-<meta name="description" content="有些复杂的程序，往往可以用C++函数库里的函数代替 这样一来，在省下了时间的同时，还可以保证正确性">
+<meta name="description" content="火车头，以及大名鼎鼎的吸氧优化 ($\text{O2}$)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++实用函数">
-<meta property="og:url" content="https://ustinianx.com/posts/C++-Pragmatic-Function/index.html">
+<meta property="og:title" content="不会卡常，优化来凑">
+<meta property="og:url" content="https://ustinianx.com/posts/Optimize/index.html">
 <meta property="og:site_name" content="逝去的时光">
-<meta property="og:description" content="有些复杂的程序，往往可以用C++函数库里的函数代替 这样一来，在省下了时间的同时，还可以保证正确性">
-<meta property="article:published_time" content="2020-09-05T09:37:22.508Z">
-<meta property="article:modified_time" content="2020-09-09T13:13:50.328Z">
+<meta property="og:description" content="火车头，以及大名鼎鼎的吸氧优化 ($\text{O2}$)">
+<meta property="og:image" content="https://pic.rmb.bdstatic.com/bjh/6df947ab703dda4852c5ef5fe7bd8a0f.png">
+<meta property="article:published_time" content="2020-09-12T02:43:59.841Z">
+<meta property="article:modified_time" content="2020-09-13T01:48:45.619Z">
 <meta property="article:author" content="Kirito_2022">
-<meta property="article:tag" content="函数">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="优化">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.rmb.bdstatic.com/bjh/6df947ab703dda4852c5ef5fe7bd8a0f.png">
 
 
 
@@ -145,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="https://ustinianx.com/posts/C++-Pragmatic-Function/"/>
+  <link rel="canonical" href="https://ustinianx.com/posts/Optimize/"/>
 
 
 
@@ -163,7 +164,7 @@
   daovoice('update');
   </script>
 
-  <title>C++实用函数 | 逝去的时光</title>
+  <title>不会卡常，优化来凑 | 逝去的时光</title>
   
 
 
@@ -395,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustinianx.com/posts/C++-Pragmatic-Function/">
+    <link itemprop="mainEntityOfPage" href="https://ustinianx.com/posts/Optimize/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kirito_2022">
@@ -412,7 +413,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++实用函数</h2>
+          <h2 class="post-title" itemprop="name headline">不会卡常，优化来凑</h2>
         
 
         <div class="post-meta">
@@ -424,8 +425,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-05T17:37:22+08:00">
-                2020-09-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-12T10:43:59+08:00">
+                2020-09-12
               </time>
             
 
@@ -447,17 +448,6 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%87%BD%E6%95%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">函数</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
                   </a>
@@ -476,8 +466,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/C++-Pragmatic-Function/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/C++-Pragmatic-Function/" itemprop="commentCount"></span>
+                <a href="/posts/Optimize/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/Optimize/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -485,7 +475,7 @@
 
           
           
-             <span id="/posts/C++-Pragmatic-Function/" class="leancloud_visitors" data-flag-title="C++实用函数">
+             <span id="/posts/Optimize/" class="leancloud_visitors" data-flag-title="不会卡常，优化来凑">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -510,7 +500,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  379
+                  514
                 </span>
               
 
@@ -526,7 +516,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -547,40 +537,52 @@
       
 
       
-        <p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
-<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
+        <p>火车头，以及大名鼎鼎的吸氧优化 ($\text{O2}$)</p>
 <a id="more"></a>
-<center><font size=4 color=red>持续更新</font></center>
-
-<hr>
-<ol>
-<li><p>__gcd ( x, y )</p>
-<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
-</li>
-<li><p>reverse ( a+1, a+n+1 )</p>
-<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
-</li>
-<li><p>unique ( a+1, a+n+1 ) </p>
-<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
-</li>
-<li><p>lower_bound ( a+1, a+n+1, x )</p>
-<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
-</li>
-<li><p>upper_bound ( a+1, a+n+1, x )</p>
-<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
-<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
-</li>
-<li><p>fill ( a+1, a+n+1, x )</p>
-<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
-</li>
-<li><p>sort ( a, a+1+n, cmp )</p>
-<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
-<p> $\text{cmp}$模板</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>qsort</p>
-<p> 进行快速排序，用法与$\text{sort}$相同。</p>
-</li>
-</ol>
+<h1 id="火车头"><a href="#火车头" class="headerlink" title="火车头"></a>火车头</h1><p>这就是火车头，可以降低<strong>时间复杂度</strong></p>
+<p>有图为证<br><img src="https://pic.rmb.bdstatic.com/bjh/6df947ab703dda4852c5ef5fe7bd8a0f.png" alt="效 果 显 著"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2) <span class="comment">//O2优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(3) <span class="comment">//O3优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"Ofast"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse- lm"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fipa- sra"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- pre"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- vrp"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpeephole2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ffast- math"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- spec"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"unroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- labels"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdevirtualize"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcaller- saves"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcrossjumping"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fthread- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fwhole- program"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- tail- merge"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- aliasing"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- overflow"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- skip- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- follow- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- interblock"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpartial- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"no- stack- protector"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- findirect- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fhoist- adjacent- loads"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- frerun- cse- after- loop"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- finline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- switch- conversion"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- foptimize- sibling- calls"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fexpensive- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funsafe- loop- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions- called- once"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdelete- null- pointer- checks"</span>)</span></span><br></pre></td></tr></table></figure>
+<h1 id="text-O2优化"><a href="#text-O2优化" class="headerlink" title="$\text{O2优化}$"></a>$\text{O2优化}$</h1><p>放在程序的开头即可打开O2优化开关<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br></pre></td></tr></table></figure><br>该优化选项会牺牲部分编译速度，除了执行O1所执行的所有优化之外，还会采用几乎所有的目标配置支持的优化算法，用以提高目标代码的运行速度。</p>
+<p>所有优化内容（仅供观看，不要添加到代码里）</p>
+<ul>
+<li>fthread- jumps </li>
+<li>falign- functions  - falign- jumps </li>
+<li>falign- loops  - falign- labels </li>
+<li>fcaller- saves </li>
+<li>fcrossjumping </li>
+<li>fcse- follow- jumps  - fcse- skip- blocks </li>
+<li>fdelete- null- pointer- checks </li>
+<li>fdevirtualize - fdevirtualize- speculatively </li>
+<li>fexpensive- optimizations </li>
+<li>fgcse  - fgcse- lm  </li>
+<li>fhoist- adjacent- loads </li>
+<li>finline- small- functions </li>
+<li>findirect- inlining </li>
+<li>fipa- cp </li>
+<li>fipa- cp- alignment </li>
+<li>fipa- bit- cp </li>
+<li>fipa- sra </li>
+<li>fipa- icf </li>
+<li>fisolate- erroneous- paths- dereference </li>
+<li>flra- remat </li>
+<li>foptimize- sibling- calls </li>
+<li>foptimize- strlen </li>
+<li>fpartial- inlining </li>
+<li>fpeephole2 </li>
+<li>freorder- blocks- algorithm=stc </li>
+<li>freorder- blocks- and- partition - freorder- functions </li>
+<li>frerun- cse- after- loop  </li>
+<li>fsched- interblock  - fsched- spec </li>
+<li>fschedule- insns  - fschedule- insns2 </li>
+<li>fstrict- aliasing - fstrict- overflow </li>
+<li>ftree- builtin- call- dce </li>
+<li>ftree- switch- conversion - ftree- tail- merge </li>
+<li>fcode- hoisting </li>
+<li>ftree- pre </li>
+<li>ftree- vrp </li>
+<li>fipa- ra</li>
+</ul>
+<p>O2优化是可以在竞赛中用的哦</p>
 
       
     </div>
@@ -596,12 +598,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/posts/C++-Pragmatic-Function/">C++实用函数</a></p>
+  <p><span>本文标题:</span><a href="/posts/Optimize/">不会卡常，优化来凑</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kirito_2022 的个人博客">Kirito_2022</a></p>
-  <p><span>发布时间:</span>2020年09月05日 - 17:37</p>
-  <p><span>最后更新:</span>2020年09月09日 - 21:13</p>
-  <p><span>原始链接:</span><a href="/posts/C++-Pragmatic-Function/" title="C++实用函数">https://ustinianx.com/posts/C++-Pragmatic-Function/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://ustinianx.com/posts/C++-Pragmatic-Function/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年09月12日 - 10:43</p>
+  <p><span>最后更新:</span>2020年09月13日 - 09:48</p>
+  <p><span>原始链接:</span><a href="/posts/Optimize/" title="不会卡常，优化来凑">https://ustinianx.com/posts/Optimize/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://ustinianx.com/posts/Optimize/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -661,9 +663,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%87%BD%E6%95%B0/" rel="tag"># 函数</a>
-          
-            <a href="/tags/C/" rel="tag"># C++</a>
+            <a href="/tags/%E4%BC%98%E5%8C%96/" rel="tag"># 优化</a>
           
         </div>
       
@@ -676,8 +676,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/P5660/" rel="next" title="P5660 数字游戏 & CSP-J 2019 T1">
-                <i class="fa fa-chevron-left"></i> P5660 数字游戏 & CSP-J 2019 T1
+              <a href="/posts/Beep-Function/" rel="next" title="C++发声函数 (Beep)">
+                <i class="fa fa-chevron-left"></i> C++发声函数 (Beep)
               </a>
             
           </div>
@@ -685,10 +685,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/f77810a8/" rel="prev" title="随笔">
-                随笔 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -768,8 +764,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -890,6 +895,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#火车头"><span class="nav-number">1.</span> <span class="nav-text">火车头</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-O2优化"><span class="nav-number">2.</span> <span class="nav-text">$\text{O2优化}$</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
