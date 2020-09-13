@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++实用函数</title>
+    <url>/posts/C++-Pragmatic-Function/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
+<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
+<a id="more"></a>
+<center><font size=4 color=red>持续更新</font></center>
+
+<hr>
+<ol>
+<li><p>__gcd ( x, y )</p>
+<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
+</li>
+<li><p>reverse ( a+1, a+n+1 )</p>
+<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
+</li>
+<li><p>unique ( a+1, a+n+1 ) </p>
+<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
+</li>
+<li><p>lower_bound ( a+1, a+n+1, x )</p>
+<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
+</li>
+<li><p>upper_bound ( a+1, a+n+1, x )</p>
+<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
+<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
+</li>
+<li><p>fill ( a+1, a+n+1, x )</p>
+<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
+</li>
+<li><p>sort ( a, a+1+n, cmp )</p>
+<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
+<p> $\text{cmp}$模板</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>qsort</p>
+<p> 进行快速排序，用法与$\text{sort}$相同。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>函数</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>函数</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++发声函数 (Beep)</title>
     <url>/posts/Beep-Function/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在洛谷偶然看到了一篇帖子，了解到了这个东西，粗略的研究了一番</p>
@@ -30,27 +77,6 @@
       <tags>
         <tag>函数</tag>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/posts/Hexo-RSS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
       </tags>
   </entry>
   <entry>
@@ -219,155 +245,24 @@
       </tags>
   </entry>
   <entry>
-    <title>5053刷奥迪Q5隐藏功能</title>
-    <url>/posts/5053-Q5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通过使用5053数据线修改ECU，起到激活某些功能的目的</p>
-<a id="more"></a>
-<center><font color=RED size=5>警告！使用此方法更改行车电脑可能会使保修期内的汽车无法保修！</font></center>
-
-<script type="math/tex; mode=display">\text{声明：按照本文修改所造成的故障，作者概不负责}</script><hr>
-<script type="math/tex; mode=display">\text{请注意，本文中的原编码可能与实际操作时不同，请仔细研究，灵活更改}</script><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>可以自己尝试更改</li>
-<li>更改之前请先记录原编码</li>
-<li>有任何问题请到奥迪服务站进行解决</li>
-<li>在启用电池或着车的情况下操作</li>
-<li>部分功能需要重新插拔钥匙之后才能激活</li>
-<li>本文中适用的车型是 $\text{Q5 技术进取型}$ ，其他车型等以后吧</li>
-</ul>
-<h2 id="电池电量表："><a href="#电池电量表：" class="headerlink" title="电池电量表："></a>电池电量表：</h2><p>选择模块<code>(S)56</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>39</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65519</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">65535</span></span><br></pre></td></tr></table></figure>
-<h2 id="锁车B一声：-扰民，不建议开启"><a href="#锁车B一声：-扰民，不建议开启" class="headerlink" title="锁车B一声：(扰民，不建议开启)"></a>锁车B一声：(扰民，不建议开启)</h2><p>选择模块<code>(S)46</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013</span>A062020B934948430053280000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">013E062020</span>B934948430053280000000</span><br></pre></td></tr></table></figure>
-<h2 id="解锁B两声：-扰民，不建议开启"><a href="#解锁B两声：-扰民，不建议开启" class="headerlink" title="解锁B两声：(扰民，不建议开启)"></a>解锁B两声：(扰民，不建议开启)</h2><p>选择<code>模块(S)46</code> -&gt; 确定 -&gt; <code>匹配10</code> -&gt; 通道<code>63</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">40</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">44</span></span><br></pre></td></tr></table></figure>
-<h2 id="背景照明亮度："><a href="#背景照明亮度：" class="headerlink" title="背景照明亮度："></a>背景照明亮度：</h2><h3 id="①-选择模块-S-09-gt-确定-gt-编码控制-C-07"><a href="#①-选择模块-S-09-gt-确定-gt-编码控制-C-07" class="headerlink" title="① 选择模块(S)09 -&gt; 确定 -&gt; 编码控制(C)-07"></a>① 选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D0F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<h3 id="②-选择模块-S-56-gt-编码控制-C-07"><a href="#②-选择模块-S-56-gt-编码控制-C-07" class="headerlink" title="② 选择模块(S)56 -&gt; 编码控制(C)-07"></a>② 选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code></h3><p>原编码：</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500035B070000</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
-<h2 id="胎压监测："><a href="#胎压监测：" class="headerlink" title="胎压监测："></a>胎压监测：</h2><p>选择<code>模块(S)03</code> -&gt; 确定 -&gt; <code>允许进入16</code> （这时仪表中的胎压故障报警，正常）-&gt; 输入允许进入密钥(0-99999):填写入<code>61378</code> -&gt; 执行 -&gt; 进入<code>编码控制(C)-07</code> -&gt; 点击<code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节1(Byte 1)</code>将<code>55</code>直接改为<code>5D</code> -&gt; <code>退出</code> -&gt; <code>执行</code> -&gt; 再进入选择<code>模块(S)56</code> -&gt; 确定 -&gt; 点<code>编码控制(C)-07</code> -&gt; <code>长编码帮助</code> -&gt; 进入长编码器 -&gt; 选到<code>字节8</code> -&gt; 将<code>Bit 6</code>直接打上勾 -&gt; 退出 -&gt; 执行.</p>
-<h2 id="倒车时右侧反光镜自动下调："><a href="#倒车时右侧反光镜自动下调：" class="headerlink" title="倒车时右侧反光镜自动下调："></a>倒车时右侧反光镜自动下调：</h2><p>首先前提是要将左门上的调节反光镜开关拧到右边。右边的反光镜下调后不会自动收回到初始状态,必须车速达到<code>15KM/h</code>以上才自动收回到初始状态。选择<code>模块(S)52</code> -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205000440004</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">011</span>D02205400440004</span><br></pre></td></tr></table></figure>
-<h2 id="高速刹车自动双闪警示灯："><a href="#高速刹车自动双闪警示灯：" class="headerlink" title="高速刹车自动双闪警示灯："></a>高速刹车自动双闪警示灯：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>编码控制(C)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010001000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">260050914034</span>AF010101000300001D0D4F1C470802010141000000</span><br></pre></td></tr></table></figure>
-<h2 id="LED灯亮度调节："><a href="#LED灯亮度调节：" class="headerlink" title="LED灯亮度调节："></a>LED灯亮度调节：</h2><p>选择<code>模块(S)09</code> -&gt; 确定 -&gt; <code>允许进入(S)16</code> -&gt; 在输入允许进入密钥(0-99999):填写入<code>20113</code> -&gt; <code>执行</code> -&gt; 弹出一个对话框意思是”允许进入已接受”点击确定 -&gt; <code>匹配10</code> -&gt; 通道<code>03</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">50</span></span><br></pre></td></tr></table></figure>
-<h2 id="刷开机画面的-text-RS-："><a href="#刷开机画面的-text-RS-：" class="headerlink" title="刷开机画面的$\text{RS}$："></a>刷开机画面的$\text{RS}$：</h2><p>选择<code>模块(S)56</code> -&gt; 确定 -&gt; <code>编码控制(c)-07</code></p>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070000</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
-<h2 id="调节自动大灯感应灵敏度与雨刷感应灵敏度："><a href="#调节自动大灯感应灵敏度与雨刷感应灵敏度：" class="headerlink" title="调节自动大灯感应灵敏度与雨刷感应灵敏度："></a>调节自动大灯感应灵敏度与雨刷感应灵敏度：</h2><p>选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; 在组件下拉框中选择第3项，即<code>RLS(Rain &amp; Light Sensor的缩写)</code></p>
-<p>如果无法下拉，我也没办法</p>
-<p><strong>含义：</strong></p>
-<ul>
-<li>第一组02代表感应器的选项：<ul>
-<li>Bit0代表开启高速自动大灯，</li>
-<li>Bit1代表开启下雨自动大灯，</li>
-<li>Bit2代表开启下雨自动关窗。</li>
-</ul>
-</li>
-<li>第二组4D代表光线传感器灵敏度，是十六进制，转化为十进制表示灵敏度是77%。</li>
-<li>第三组25代表雨量传感器灵敏度，是十六进制，转化为十进制表示灵敏度是37%。</li>
-</ul>
-<p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">024</span>D25</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">061032</span></span><br></pre></td></tr></table></figure>
-<p>（即开启下雨自动大灯，开启下雨自动关窗，光线传感器灵敏度调整为16%，雨量传感器灵敏度调整为50%）</p>
-<h2 id="驻车通风加热系统："><a href="#驻车通风加热系统：" class="headerlink" title="驻车通风加热系统："></a>驻车通风加热系统：</h2><h3 id="①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"><a href="#①选择模块-S-56-gt-编码控制-C-07-gt-Byte-8中的Bit-2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。" class="headerlink" title="①选择模块(S)56 -&gt; 编码控制(C)-07 -&gt; Byte 8中的Bit 2打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。"></a>①选择<code>模块(S)56</code> -&gt; <code>编码控制(C)-07</code> -&gt; <code>Byte 8</code>中的<code>Bit 2</code>打钩（其实bit2就是16进制里的加4，比如原来是C3，然后变成C7），执行。</h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C35B070002</span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0502008001050500</span>C75B070002</span><br></pre></td></tr></table></figure>
-<h3 id="②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"><a href="#②选择模块-S-08-gt-编码控制-C-07-gt-把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。" class="headerlink" title="②选择模块(S)08 -&gt; 编码控制(C)-07 -&gt; 把64016000改成64096000（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。"></a>②选择<code>模块(S)08</code> -&gt; <code>编码控制(C)-07</code> -&gt; 把<code>64016000</code>改成<code>64096000</code>（其实也就是byte1里的bit3打钩，就是由16进制里的01变成09），执行。</h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64016000</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">64096000</span></span><br></pre></td></tr></table></figure>
-<h3 id="③选择模块-S-08-gt-匹配10-gt-通道06"><a href="#③选择模块-S-08-gt-匹配10-gt-通道06" class="headerlink" title="③选择模块(S)08 -&gt; 匹配10 -&gt; 通道06"></a>③选择<code>模块(S)08</code> -&gt; <code>匹配10</code> -&gt; 通道<code>06</code></h3><p>原编码：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<font size=2>参考文献
-- http://www.xcar.com.cn/bbs/viewthread.php?tid=17536192 </font>
-
-</blockquote>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/posts/Hexo-RSS/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
 ]]></content>
       <categories>
-        <category>汽车</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>汽车</tag>
-        <tag>奥迪</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++实用函数</title>
-    <url>/posts/C++-Pragmatic-Function/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
-<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
-<a id="more"></a>
-<center><font size=4 color=red>持续更新</font></center>
-
-<hr>
-<ol>
-<li><p>__gcd ( x, y )</p>
-<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
-</li>
-<li><p>reverse ( a+1, a+n+1 )</p>
-<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
-</li>
-<li><p>unique ( a+1, a+n+1 ) </p>
-<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
-</li>
-<li><p>lower_bound ( a+1, a+n+1, x )</p>
-<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
-</li>
-<li><p>upper_bound ( a+1, a+n+1, x )</p>
-<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
-<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
-</li>
-<li><p>fill ( a+1, a+n+1, x )</p>
-<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
-</li>
-<li><p>sort ( a, a+1+n, cmp )</p>
-<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
-<p> $\text{cmp}$模板</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>qsort</p>
-<p> 进行快速排序，用法与$\text{sort}$相同。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>函数</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>C++</tag>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
       </tags>
   </entry>
   <entry>
@@ -496,6 +391,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/Hello-World/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>VMWare虚拟机滥用指南</title>
     <url>/posts/VMWare/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
@@ -609,74 +518,6 @@
       </tags>
   </entry>
   <entry>
-    <title>随笔</title>
-    <url>/posts/f77810a8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>光明无限好，但黑暗永生</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/Hello-World/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
-    <url>/posts/Hexo-Domain/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
-<p>自定义你的域名</p>
-<a id="more"></a>
-<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
-<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
-<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
-<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
-<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
-<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
-<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
-<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
-<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/posts/4683/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
-      <categories>
-        <category>计算机原理</category>
-      </categories>
-      <tags>
-        <tag>计算机原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>珂朵莉树学习笔记</title>
     <url>/posts/Chtholly-Tree/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法，吊打线段树，暴踩标算，<del>迅速AK IOI</del></p>
@@ -730,6 +571,60 @@
       <tags>
         <tag>珂朵莉树</tag>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>想要让博客逼格更高？Hexo绑定个人域名</title>
+    <url>/posts/Hexo-Domain/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
+<p>自定义你的域名</p>
+<a id="more"></a>
+<h2 id="首先你需要有一个域名"><a href="#首先你需要有一个域名" class="headerlink" title="首先你需要有一个域名"></a>首先你需要有一个域名</h2><p>域名后缀看自己需求，<code>.com</code>属于比较贵的，因此选择近年来比较火的<code>.top .xyz</code>之类的</p>
+<p>可以选择<br><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a><br>或者<br><a href="https://www.west.cn/" target="_blank" rel="noopener">西部数码</a><br>之类的</p>
+<h2 id="获取-text-IP-地址"><a href="#获取-text-IP-地址" class="headerlink" title="获取 $\text{IP}$ 地址"></a>获取 $\text{IP}$ 地址</h2><p>在此之前需要获取自己 GitHub 的二级域名的 IP 地址。Git Bash下ping自己博客的地址即可获得。</p>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>在你购买网站的控制台中找到域名解析，将刚刚得到的 ip 地址填入后面的“对应值（或者叫记录值）”，选择A记录，其他不用动。<br>之后在主机名中分别填入 <code>www</code> 和 <code>@</code>。刷新一下，大概就成功了。</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahUolD.png" alt=""></p>
+<h2 id="text-GitHub-仓库的-text-custom-domain-绑定域名"><a href="#text-GitHub-仓库的-text-custom-domain-绑定域名" class="headerlink" title="$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名"></a>$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</h2><p>进入仓库中， 点击<code>setting</code>往下滑 会看到<code>custom domain</code></p>
+<p>随后将自己购买的域名填写进去（不要加www之类的任何东西）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahd1Kg.png" alt=""></p>
+<h2 id="设置-text-CNAME"><a href="#设置-text-CNAME" class="headerlink" title="设置 $\text{CNAME}$"></a>设置 $\text{CNAME}$</h2><p>进入Hexo根目录下的 <code>source</code> 文件夹，添加一个CNAME。<font color=RED>注意不要添加任何后缀名！</font></p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
+<p>在里面填入你的域名。用记事本即可打开（当然VSCode也可以）</p>
+<p><img src="https://s1.ax1x.com/2020/08/07/ahwaTA.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔</title>
+    <url>/posts/f77810a8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>光明无限好，但黑暗永生</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/posts/4683/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
       </tags>
   </entry>
   <entry>
