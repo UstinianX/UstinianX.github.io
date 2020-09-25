@@ -80,6 +80,41 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客添加RSS订阅功能</title>
+    <url>/posts/Hexo-RSS/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
+<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
+<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
+<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
+<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
+<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
+<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/posts/Hexo-rate/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
     <url>/posts/Hexo/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
@@ -245,38 +280,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加RSS订阅功能</title>
-    <url>/posts/Hexo-RSS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>$\text{RSS(Really Simple Syndication)}$简易信息聚合,在互联网上被广泛采用的内容包装和投递协.</p>
-<p>是一种描述同步网站内容的格式,使用$\text{xml}$格式. 当网站内容更新时,可以通过订阅$\text{RSS}$源在$\text{RSS}$阅读器上获取更新的信息</p>
-<p>大多数内容提供的网站都会提供$\text{RSS}$订阅的功能,方便用户去获取最新的内容.</p>
-<p>本篇文章主要介绍怎么给自己的$\text{Hexo}$博客添加$\text{RSS}$源<br><a id="more"></a></p>
-<h2 id="安装-text-feed-插件"><a href="#安装-text-feed-插件" class="headerlink" title="安装$\text{feed}$插件"></a>安装$\text{feed}$插件</h2><p>$\text{Hexo}$博客有一个专门生成$\text{RSS xml}$文件的插件<code>hexo-generator-feed</code><br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<code>站点配置文件</code></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">## RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<!-- ![](https://ae01.alicdn.com/kf/Uabb845f7d7694a81a9e8225c8611c92dZ.jpg)、 -->
-<p>接下来直接执行<code>hexo g</code>就可以生成$\text{xml}$文件</p>
-<h2 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h2><p>从邮件里添加RSS的网址就好了</p>
+    <title>P5660 数字游戏 &amp; CSP-J 2019 T1</title>
+    <url>/posts/P5660/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>碰巧碰到。</p>
+<a id="more"></a>
+<p>直接模拟就可以，暴力出奇迹</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">9</span>];</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] == <span class="string">'1'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>看了洛谷大佬<a href="https://www.luogu.com.cn/user/191252" target="_blank" rel="noopener">@Happy_86868686</a>的<a href="https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660" target="_blank" rel="noopener">题解</a>，我整个人都震惊了</p>
+<p>%%%%%%%%%</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;f;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;f%<span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料</p>
+<font size=2>https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660</font></blockquote>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>算法</category>
+        <category>题解</category>
+        <category>字符串</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>RSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/posts/Hexo-rate/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
+        <tag>题解</tag>
+        <tag>CSP-J 2019</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -315,67 +342,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>P5660 数字游戏 &amp; CSP-J 2019 T1</title>
-    <url>/posts/P5660/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>碰巧碰到。</p>
-<a id="more"></a>
-<p>直接模拟就可以，暴力出奇迹</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">9</span>];</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] == <span class="string">'1'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>看了洛谷大佬<a href="https://www.luogu.com.cn/user/191252" target="_blank" rel="noopener">@Happy_86868686</a>的<a href="https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660" target="_blank" rel="noopener">题解</a>，我整个人都震惊了</p>
-<p>%%%%%%%%%</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;f;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;f%<span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>参考资料</p>
-<font size=2>https://www.luogu.com.cn/blog/OoHappyoO/mod9-p5660</font></blockquote>
-]]></content>
-      <categories>
-        <category>算法</category>
-        <category>题解</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>题解</tag>
-        <tag>CSP-J 2019</tag>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VMWare虚拟机滥用指南</title>
-    <url>/posts/VMWare/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
-<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
-<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
-<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
-<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
-<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
-<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
-<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
-<p>选择文件</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
-<p>自行设置</p>
-<p>用户名和密码将会是Linux系统的用户名和密码</p>
-<p>下面自行设置就好了</p>
-<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
-<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
-<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
-<p>默认的SCSI就没有问题</p>
-<p>这些都是硬盘接口</p>
-<p>IDE最慢，NVMe最快</p>
-<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
-<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
-<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -439,60 +405,37 @@
       </tags>
   </entry>
   <entry>
-    <title>不会卡常，优化来凑</title>
-    <url>/posts/Optimize/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>火车头，以及大名鼎鼎的吸氧优化 ($\text{O2}$)</p>
-<a id="more"></a>
-<h1 id="火车头"><a href="#火车头" class="headerlink" title="火车头"></a>火车头</h1><p>这就是火车头，可以降低<strong>时间复杂度</strong></p>
-<p>有图为证<br><img src="https://pic.rmb.bdstatic.com/bjh/6df947ab703dda4852c5ef5fe7bd8a0f.png" alt="效 果 显 著"></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2) <span class="comment">//O2优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(3) <span class="comment">//O3优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"Ofast"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse- lm"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fipa- sra"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- pre"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- vrp"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpeephole2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ffast- math"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- spec"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"unroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- labels"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdevirtualize"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcaller- saves"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcrossjumping"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fthread- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fwhole- program"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- tail- merge"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- aliasing"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- overflow"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- skip- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- follow- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- interblock"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpartial- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"no- stack- protector"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- findirect- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fhoist- adjacent- loads"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- frerun- cse- after- loop"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- finline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- switch- conversion"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- foptimize- sibling- calls"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fexpensive- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funsafe- loop- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions- called- once"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdelete- null- pointer- checks"</span>)</span></span><br></pre></td></tr></table></figure>
-<h1 id="text-O2优化"><a href="#text-O2优化" class="headerlink" title="$\text{O2优化}$"></a>$\text{O2优化}$</h1><p>放在程序的开头即可打开O2优化开关<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br></pre></td></tr></table></figure><br>该优化选项会牺牲部分编译速度，除了执行O1所执行的所有优化之外，还会采用几乎所有的目标配置支持的优化算法，用以提高目标代码的运行速度。</p>
-<p>所有优化内容（仅供观看，不要添加到代码里）</p>
-<ul>
-<li>fthread- jumps </li>
-<li>falign- functions  - falign- jumps </li>
-<li>falign- loops  - falign- labels </li>
-<li>fcaller- saves </li>
-<li>fcrossjumping </li>
-<li>fcse- follow- jumps  - fcse- skip- blocks </li>
-<li>fdelete- null- pointer- checks </li>
-<li>fdevirtualize - fdevirtualize- speculatively </li>
-<li>fexpensive- optimizations </li>
-<li>fgcse  - fgcse- lm  </li>
-<li>fhoist- adjacent- loads </li>
-<li>finline- small- functions </li>
-<li>findirect- inlining </li>
-<li>fipa- cp </li>
-<li>fipa- cp- alignment </li>
-<li>fipa- bit- cp </li>
-<li>fipa- sra </li>
-<li>fipa- icf </li>
-<li>fisolate- erroneous- paths- dereference </li>
-<li>flra- remat </li>
-<li>foptimize- sibling- calls </li>
-<li>foptimize- strlen </li>
-<li>fpartial- inlining </li>
-<li>fpeephole2 </li>
-<li>freorder- blocks- algorithm=stc </li>
-<li>freorder- blocks- and- partition - freorder- functions </li>
-<li>frerun- cse- after- loop  </li>
-<li>fsched- interblock  - fsched- spec </li>
-<li>fschedule- insns  - fschedule- insns2 </li>
-<li>fstrict- aliasing - fstrict- overflow </li>
-<li>ftree- builtin- call- dce </li>
-<li>ftree- switch- conversion - ftree- tail- merge </li>
-<li>fcode- hoisting </li>
-<li>ftree- pre </li>
-<li>ftree- vrp </li>
-<li>fipa- ra</li>
-</ul>
-<p>O2优化是可以在竞赛中用的哦</p>
+    <title>VMWare虚拟机滥用指南</title>
+    <url>/posts/VMWare/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>VMWare虚拟机的使用还是比较操作简单的，本文将介绍一般情况下VMWare虚拟机的使用方法<br><a id="more"></a></p>
+<h1 id="0-下载VMware虚拟机"><a href="#0-下载VMware虚拟机" class="headerlink" title="0. 下载VMware虚拟机"></a>0. 下载VMware虚拟机</h1><p><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0" target="_blank" rel="noopener">你瞧瞧你瞧瞧，官网不就挺好吗？</a></p>
+<p>一切下载方法<del>和<a href="https://www.luogu.com.cn/paste/7dqz14ny" target="_blank" rel="noopener">破解方法</a></del>，<strong>Baidu First Search</strong> ,Pls.</p>
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>自行配置或BFS</p>
+<h1 id="2-寻找镜像"><a href="#2-寻找镜像" class="headerlink" title="2. 寻找镜像"></a>2. 寻找镜像</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDvM8I.png" alt=""><br>由于只找到了这一个未安装的，<del>新镜像懒得下载</del>，就玩这个吧</p>
+<p>一般来说是一个.<strong>iso</strong>文件，但Mac OS虚拟机可能会使用.<strong>cdr</strong>文件或者.<strong>dmg</strong>文件</p>
+<h1 id="3-新建虚拟机"><a href="#3-新建虚拟机" class="headerlink" title="3.新建虚拟机"></a>3.新建虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NDv7ZD.png" alt=""></p>
+<p>自定义不比典型复杂多少，典型也不比自定义复杂多少</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpylR.png" alt=""></p>
+<p>选择文件</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/NrpKw8.png" alt=""></p>
+<p>自行设置</p>
+<p>用户名和密码将会是Linux系统的用户名和密码</p>
+<p>下面自行设置就好了</p>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nrpeyt.png" alt=""></p>
+<p>与物理机的内存相关。比如蒟蒻的笔记本40GB内存，配给虚拟机的上限就是34.7</p>
+<p>NOI Linux显然不需要这么大，4G其实就可以了<br><img src="https://s1.ax1x.com/2020/06/26/Nrp1YQ.png" alt=""></p>
+<p>默认的SCSI就没有问题</p>
+<p>这些都是硬盘接口</p>
+<p>IDE最慢，NVMe最快</p>
+<p>但是虚拟磁盘的速度如何就不好说了，没测过</p>
+<p>Mac系统不能使用NVMe，会反复启动无法安装，原因不清楚</p>
+<h1 id="4-打开虚拟机"><a href="#4-打开虚拟机" class="headerlink" title="4.打开虚拟机"></a>4.打开虚拟机</h1><p><img src="https://s1.ax1x.com/2020/06/26/NrpJln.png" alt="开机界面"><br>安装好之后，打开<br><img src="https://s1.ax1x.com/2020/06/26/NrVVSO.png" alt=""><br>一般来说，密码是<strong>123456</strong><br><img src="https://s1.ax1x.com/2020/06/26/NrVd7n.png" alt=""><br>这就是<strong>辣鸡NOI Linux</strong>的桌面，正常情况下你会发现你已经连上网了</p>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>Software</category>
       </categories>
       <tags>
-        <tag>优化</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -558,6 +501,79 @@
       </tags>
   </entry>
   <entry>
+    <title>不会卡常，优化来凑</title>
+    <url>/posts/Optimize/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>火车头，以及大名鼎鼎的吸氧优化 ($\text{O2}$)</p>
+<a id="more"></a>
+<h1 id="火车头"><a href="#火车头" class="headerlink" title="火车头"></a>火车头</h1><p>这就是火车头，可以降低<strong>时间复杂度</strong></p>
+<p>有图为证<br><img src="https://pic.rmb.bdstatic.com/bjh/6df947ab703dda4852c5ef5fe7bd8a0f.png" alt="效 果 显 著"></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2) <span class="comment">//O2优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(3) <span class="comment">//O3优化</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"Ofast"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fgcse- lm"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fipa- sra"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- pre"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- vrp"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpeephole2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ffast- math"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- spec"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"unroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- labels"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdevirtualize"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcaller- saves"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcrossjumping"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fthread- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funroll- loops"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fwhole- program"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- tail- merge"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fschedule- insns2"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- aliasing"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fstrict- overflow"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- falign- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- skip- blocks"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fcse- follow- jumps"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fsched- interblock"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fpartial- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"no- stack- protector"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- freorder- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- findirect- inlining"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fhoist- adjacent- loads"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- frerun- cse- after- loop"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- finline- small- functions"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- ftree- switch- conversion"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- foptimize- sibling- calls"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fexpensive- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- funsafe- loop- optimizations"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"inline- functions- called- once"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"- fdelete- null- pointer- checks"</span>)</span></span><br></pre></td></tr></table></figure>
+<h1 id="text-O2优化"><a href="#text-O2优化" class="headerlink" title="$\text{O2优化}$"></a>$\text{O2优化}$</h1><p>放在程序的开头即可打开O2优化开关<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br></pre></td></tr></table></figure><br>该优化选项会牺牲部分编译速度，除了执行O1所执行的所有优化之外，还会采用几乎所有的目标配置支持的优化算法，用以提高目标代码的运行速度。</p>
+<p>所有优化内容（仅供观看，不要添加到代码里）</p>
+<ul>
+<li>fthread- jumps </li>
+<li>falign- functions  - falign- jumps </li>
+<li>falign- loops  - falign- labels </li>
+<li>fcaller- saves </li>
+<li>fcrossjumping </li>
+<li>fcse- follow- jumps  - fcse- skip- blocks </li>
+<li>fdelete- null- pointer- checks </li>
+<li>fdevirtualize - fdevirtualize- speculatively </li>
+<li>fexpensive- optimizations </li>
+<li>fgcse  - fgcse- lm  </li>
+<li>fhoist- adjacent- loads </li>
+<li>finline- small- functions </li>
+<li>findirect- inlining </li>
+<li>fipa- cp </li>
+<li>fipa- cp- alignment </li>
+<li>fipa- bit- cp </li>
+<li>fipa- sra </li>
+<li>fipa- icf </li>
+<li>fisolate- erroneous- paths- dereference </li>
+<li>flra- remat </li>
+<li>foptimize- sibling- calls </li>
+<li>foptimize- strlen </li>
+<li>fpartial- inlining </li>
+<li>fpeephole2 </li>
+<li>freorder- blocks- algorithm=stc </li>
+<li>freorder- blocks- and- partition - freorder- functions </li>
+<li>frerun- cse- after- loop  </li>
+<li>fsched- interblock  - fsched- spec </li>
+<li>fschedule- insns  - fschedule- insns2 </li>
+<li>fstrict- aliasing - fstrict- overflow </li>
+<li>ftree- builtin- call- dce </li>
+<li>ftree- switch- conversion - ftree- tail- merge </li>
+<li>fcode- hoisting </li>
+<li>ftree- pre </li>
+<li>ftree- vrp </li>
+<li>fipa- ra</li>
+</ul>
+<p>O2优化是可以在竞赛中用的哦</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清理加速球没有卵用</title>
+    <url>/posts/4683/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
+<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
+<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
+<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
+<p>因此解决这方面问题的唯一办法就是</p>
+<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+      <categories>
+        <category>计算机原理</category>
+      </categories>
+      <tags>
+        <tag>计算机原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>想要让博客逼格更高？Hexo绑定个人域名</title>
     <url>/posts/Hexo-Domain/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>GitHub自带的域名过于普通？想让自己的博客更有逼格？</p>
@@ -584,19 +600,15 @@
       </tags>
   </entry>
   <entry>
-    <title>清理加速球没有卵用</title>
-    <url>/posts/4683/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这其实这是国内某些厂家的噱头<br><a id="more"></a></p>
-<p>实际上这个”加速”效果并没有起到任何作用，甚至还会拖慢速度。</p>
-<p>众所周知，这类工具大多使用了$\text{EmptyWorkingSet}$或$\text{SetProcessWorkingSetSize}$这两个函数,其作用是将进程的工作内存强制写入$\text{windows}$的页面文件中(虚拟内存)。但虚拟内存多存在于硬盘之中,其存取效率比直接在内存中慢了几十倍。</p>
-<p>当你仍然需要使用这块内存的数据时,电脑需要先将它从虚拟内存中调出来,这时不仅没有加速效果,反而还造成了卡顿。</p>
-<p>因此解决这方面问题的唯一办法就是</p>
-<center><font type=等线 size=6 color=RED>换内存条</font></center>]]></content>
+    <title>随笔</title>
+    <url>/posts/f77810a8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>光明无限好，但黑暗永生</p>
+]]></content>
       <categories>
-        <category>计算机原理</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>计算机原理</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -653,18 +665,6 @@
       <tags>
         <tag>珂朵莉树</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随笔</title>
-    <url>/posts/f77810a8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>光明无限好，但黑暗永生</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
