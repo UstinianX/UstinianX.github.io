@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustinianx.com/posts/CSP2020/</loc>
+    <lastmod>2020-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://ustinianx.com/posts/C++-Pragmatic-Function/</loc>
+    <lastmod>2020-10-05</lastmod>
+  </url>
+  <url>
     <loc>https://ustinianx.com/posts/Misaka's-Sisters/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-10-02</lastmod>
   </url>
   <url>
     <loc>https://ustinianx.com/posts/Optimize/</loc>
@@ -18,10 +26,6 @@
   </url>
   <url>
     <loc>https://ustinianx.com/posts/P5660/</loc>
-    <lastmod>2020-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://ustinianx.com/posts/C++-Pragmatic-Function/</loc>
     <lastmod>2020-09-09</lastmod>
   </url>
   <url>
