@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSP退役感悟</title>
+    <url>/posts/CSP2020-Retired/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><script type="math/tex; mode=display">\Large\text{——————祝各位海阔天空，不旅迷途——————}</script><a id="more"></a>
+<p>努力学习了半年、参加了好几次集训之后，$\text{CSP2020}$ 终究是以失败告终了</p>
+<p>但我仍然对 $\text{OI}$ 留有念想。上周末，我坐在数学课的教室里时，竟有一种不真实感，一种不安的情绪弥漫在心中。我意识到——我退役了。我的状态很不好，若有所失。一年半的时间若白驹过隙，转瞬即逝。去年 CSP，学了6个月 OI 的我第一次参加竞赛就有了 PJ 2=，我当时欣喜若狂。从那时起，我就在畅享自己能够拿到 tg2=、tg1=、保送一个好高中······之后的那段时间，我对 OI 的热情达到了前所未有的程度。</p>
+<p>虽说结局并不好，但我很享受学习 OI 的过程。这段时光，虽说它耗费了了我大量时间，但它对我的影响很大。它曾经给了我很大的自信，并且这段时间认识了不少新的朋友。虽说在 OI 的路上走进了死胡同，但我从未后悔选择 OI。</p>
+<p>现在已经步入初三，学习时间愈发紧张。想起 OI 时也只是登上洛谷看一圈，精力大部分放在了whk上。对 OI 的思念如流星，总是能想起，但很快就划过了。中考已经在眼前了，希望 OI 的暂时放弃可以在中考中有更好的成绩。</p>
+<p>PS：数学其实是我唯一的弱项，其他都能爆切。这剩下的一年希望能搞好数学，毕竟这也是阻碍我 OI 发展的最大绊脚石</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/34dc9bdb5a0b2ba9a8128a400bad6d37.jpeg" alt="多少次迎着冷眼和嘲笑，从未放弃过心中的理想"></p>
+<script type="math/tex; mode=display">\Large\text{——————中考加油，来年再会——————}</script><script type="math/tex; mode=display">\text{Kirito-2022 On 2020.10.21}</script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=346573&auto=1&height=66"></iframe>]]></content>
+      <categories>
+        <category>CSP</category>
+      </categories>
+      <tags>
+        <tag>CSP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++发声函数 (Beep)</title>
     <url>/posts/Beep-Function/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在洛谷偶然看到了一篇帖子，了解到了这个东西，粗略的研究了一番</p>
@@ -22,55 +40,6 @@
 <p>参考链接：</p>
 <p>C++中发声函数Beep详解 <a href="https://blog.csdn.net/v1t1p9hvbd/article/details/71523218" target="_blank" rel="noopener">https://blog.csdn.net/v1t1p9hvbd/article/details/71523218</a></p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>函数</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++实用函数</title>
-    <url>/posts/C++-Pragmatic-Function/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
-<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
-<a id="more"></a>
-<center><font size=4 color=red>持续更新</font></center>
-
-<hr>
-<ol>
-<li><p>__gcd ( x, y )</p>
-<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
-</li>
-<li><p>reverse ( a+1, a+n+1 )</p>
-<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
-</li>
-<li><p>unique ( a+1, a+n+1 ) </p>
-<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
-</li>
-<li><p>lower_bound ( a+1, a+n+1, x )</p>
-<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
-</li>
-<li><p>upper_bound ( a+1, a+n+1, x )</p>
-<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
-<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
-</li>
-<li><p>fill ( a+1, a+n+1, x )</p>
-<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
-</li>
-<li><p>sort ( a, a+1+n, cmp )</p>
-<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
-<p> $\text{cmp}$模板</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>qsort</p>
-<p> 进行快速排序，用法与$\text{sort}$相同。</p>
-</li>
-<li><p>pow</p>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>函数</category>
@@ -124,21 +93,52 @@
       </tags>
   </entry>
   <entry>
-    <title>CSP退役感悟</title>
-    <url>/posts/CSP2020-Retired/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><script type="math/tex; mode=display">\Large\text{——————祝各位海阔天空，不旅迷途——————}</script><a id="more"></a>
-<p>努力学习了半年、参加了好几次集训之后，$\text{CSP2020}$ 终究是以失败告终了</p>
-<p>但我仍然对 $\text{OI}$ 留有念想。上周末，我坐在数学课的教室里时，竟有一种不真实感，一种不安的情绪弥漫在心中。我意识到——我退役了。我的状态很不好，若有所失。一年半的时间若白驹过隙，转瞬即逝。去年 CSP，学了6个月 OI 的我第一次参加竞赛就有了 PJ 2=，我当时欣喜若狂。从那时起，我就在畅享自己能够拿到 tg2=、tg1=、保送一个好高中······之后的那段时间，我对 OI 的热情达到了前所未有的程度。</p>
-<p>虽说结局并不好，但我很享受学习 OI 的过程。这段时光，虽说它耗费了了我大量时间，但它对我的影响很大。它曾经给了我很大的自信，并且这段时间认识了不少新的朋友。虽说在 OI 的路上走进了死胡同，但我从未后悔选择 OI。</p>
-<p>现在已经步入初三，学习时间愈发紧张。想起 OI 时也只是登上洛谷看一圈，精力大部分放在了whk上。对 OI 的思念如流星，总是能想起，但很快就划过了。中考已经在眼前了，希望 OI 的暂时放弃可以在中考中有更好的成绩。</p>
-<p>PS：数学其实是我唯一的弱项，其他都能爆切。这剩下的一年希望能搞好数学，毕竟这也是阻碍我 OI 发展的最大绊脚石</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/34dc9bdb5a0b2ba9a8128a400bad6d37.jpeg" alt="多少次迎着冷眼和嘲笑，从未放弃过心中的理想"></p>
-<script type="math/tex; mode=display">\Large\text{——————中考加油，来年再会——————}</script><script type="math/tex; mode=display">\text{Kirito-2022 On 2020.10.21}</script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=346573&auto=1&height=66"></iframe>]]></content>
+    <title>C++实用函数</title>
+    <url>/posts/C++-Pragmatic-Function/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有些复杂的程序，往往可以用C++函数库里的函数代替</p>
+<p>这样一来，在省下了时间的同时，还可以保证正确性</p>
+<a id="more"></a>
+<center><font size=4 color=red>持续更新</font></center>
+
+<hr>
+<ol>
+<li><p>__gcd ( x, y )</p>
+<p> 求两个数的最大公约数，如__gcd( 6, 8 ) 返回2</p>
+</li>
+<li><p>reverse ( a+1, a+n+1 )</p>
+<p> 将数组中的元素反转。$a$ 是数组名，$n$ 是长度，跟 $sort$ 的用法一样。值得一提的是，对于字符型数组也同样适用</p>
+</li>
+<li><p>unique ( a+1, a+n+1 ) </p>
+<p> 去重函数。跟$sort$的用法一样。不过他返回的值是最后一个数的地址，所以要得到新的数组长度应该这么写： <code>_n = unique( a + 1, a + n + 1 ) - a - 1</code>.</p>
+</li>
+<li><p>lower_bound ( a+1, a+n+1, x )</p>
+<p> lower_bound是查找数组中第一个大于等于x的数，返回该地址，同理也是 <code>pos = lower_bound( a+1, a+n+1, x ) - a</code></p>
+</li>
+<li><p>upper_bound ( a+1, a+n+1, x )</p>
+<p> upper_bound是查找第一个大于x的数，用法和lower_bound一样</p>
+<p> 复杂度是二分的复杂度，$O( logn )$，代替了手写二分</p>
+</li>
+<li><p>fill ( a+1, a+n+1, x )</p>
+<p> 将数组a中的每一个元素都赋成x，跟 memset 的区别是，memset 是一个字节一个字节赋值，fill 是一个元素一个元素赋值</p>
+</li>
+<li><p>sort ( a, a+1+n, cmp )</p>
+<p> 排序函数。$a$ 表示起始值，后面是终了值。$\text{cmp}$写不写都可以，不写的话默认从小到大</p>
+<p> $\text{cmp}$模板</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>qsort</p>
+<p> 进行快速排序，用法与$\text{sort}$相同。</p>
+</li>
+<li><p>pow</p>
+</li>
+</ol>
+]]></content>
       <categories>
-        <category>CSP</category>
+        <category>函数</category>
+        <category>C++</category>
       </categories>
       <tags>
-        <tag>CSP</tag>
+        <tag>函数</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -307,12 +307,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加浏览进度</title>
-    <url>/posts/Hexo-rate/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
-<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
-<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>Hexo博客添加背景音乐</title>
+    <url>/posts/Hexo-Background/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
+<h2 id="下面我将会提到数种方法，选择一种最合适的即可"><a href="#下面我将会提到数种方法，选择一种最合适的即可" class="headerlink" title="下面我将会提到数种方法，选择一种最合适的即可"></a>下面我将会提到数种方法，选择一种最合适的即可</h2><h2 id="1-直接插入到某一篇文章"><a href="#1-直接插入到某一篇文章" class="headerlink" title="1.直接插入到某一篇文章"></a>1.直接插入到某一篇文章</h2><h3 id="text-iframe-标签"><a href="#text-iframe-标签" class="headerlink" title="$\text{iframe}$标签"></a>$\text{iframe}$标签</h3><p>相当的简单</p>
+<p>先到网易云音乐中中搜出你想要的音乐，然后点击<strong>生成外链播放器</strong></p>
+<p>所需要的所有代码都在这个框框内了</p>
+<p><img src="https://s1.ax1x.com/2020/07/11/UQzKDs.png" alt="温馨提示：打开这个页面的时候记得关闭声音"></p>
+<p>然后把这个代码粘贴到你的文章的$\text{.md}$文件中，就可以显示了</p>
+<p><img src="https://s1.ax1x.com/2020/07/11/UlSflF.png" alt="大概就是......这个样子的"></p>
+<h3 id="text-JavaScript-标签"><a href="#text-JavaScript-标签" class="headerlink" title="$\text{JavaScript}$标签"></a>$\text{JavaScript}$标签</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ae01.alicdn.com/kf/U9977f35f4c25466ca7b7fc536dc5a0cca.jpg" alt="就是这个效果"></p>
+<h2 id="2-使用-text-Hexo-tag-Aplayer-插件"><a href="#2-使用-text-Hexo-tag-Aplayer-插件" class="headerlink" title="2.使用$\text{Hexo-tag-Aplayer}$插件"></a>2.使用$\text{Hexo-tag-Aplayer}$插件</h2><p>$\text{hexo-tag-aplayer}$是$\text{Aplayer}$在$\text{Hexo}$上的插件，其配置可以参考<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">官方文档</a><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-tag-aplayer</span></span><br></pre></td></tr></table></figure></p>
+<p>在文章的markdown文档里添加<br><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"她的睫毛"</span> <span class="string">"周杰伦"</span> <span class="string">"http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3"</span>  <span class="string">"http://home.ustc.edu.cn/~mmmwhy/jay.jpg"</span> <span class="string">"autoplay=false"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ae01.alicdn.com/kf/Udfd851ed33b64db4a48fa81beed53effG.jpg" alt="Aplayer"></p>
+<hr>
+<h2 id="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"><a href="#以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面" class="headerlink" title="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"></a>以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面</h2><h3 id="可以控制是否自动播放（自动播放移动端不支持）"><a href="#可以控制是否自动播放（自动播放移动端不支持）" class="headerlink" title="可以控制是否自动播放（自动播放移动端不支持）"></a>可以控制是否自动播放（<del>自动播放移动端不支持</del>）</h3><p>修改  <code>themes/next/layout/_macro/sidebar.swig</code>  文件</p>
+<p>添加播放器内容<br><figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 音乐播放器 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.background_music %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; theme.background_music &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br><img src="https://s1.ax1x.com/2020/07/11/Ul97RK.png" alt="注意上下文位置"></p>
+<p>在 <code>themes/next/_config.yml</code> 主题配置文件中添加歌单地址配置</p>
+<figure class="highlight plain"><figcaption><span>//music.163.com/outchain/player?type</span></figcaption><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line">background_music:</span><br></pre></td></tr></table></figure>
+<p>如图所示填入歌曲的部分HTML代码</p>
+<hr>
+<h2 id="添加歌单"><a href="#添加歌单" class="headerlink" title="添加歌单"></a>添加歌单</h2><p>创建歌单，复制代码<br><img src="https://ae01.alicdn.com/kf/Ub350f782a6774d0f8a619e8fee247af3s.jpg" alt=""></p>
+<p>把 <code>height=90</code> 改成 <code>height=66</code></p>
+<p>最后贴一张我的博客的效果图</p>
+<p><img src="https://ae01.alicdn.com/kf/U97a85f1666514b8494aab98b19b60e4fe.jpg" alt=""></p>
+<hr>
+<h2 id="也可以单独的做一个歌单页面"><a href="#也可以单独的做一个歌单页面" class="headerlink" title="也可以单独的做一个歌单页面"></a>也可以单独的做一个歌单页面</h2><p>最新版的 $\text{hexo-tag-aplayer}$ 已经支持了$\text{MetingJS}$的使用，可以直接解析网络平台的歌曲，首先要在站点配置文件中开启 $\text{meting}$ 模式，添加以下代码在配置文件的最后：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% meting <span class="string">"7634442256"</span> <span class="string">"tencent"</span> <span class="string">"playlist"</span> <span class="string">"theme:#FF4081"</span> <span class="string">"mode:circulation"</span> <span class="string">"mutex:true"</span> <span class="string">"listmaxheight:340px"</span> <span class="string">"preload:auto"</span> %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
+<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -369,36 +393,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客添加背景音乐</title>
-    <url>/posts/Hexo-Background/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo添加音乐的方式有很多种，可供使用的插件也不少。NexT主题下内置音乐应该算比较简便的一种了<br><a id="more"></a></p>
-<h2 id="下面我将会提到数种方法，选择一种最合适的即可"><a href="#下面我将会提到数种方法，选择一种最合适的即可" class="headerlink" title="下面我将会提到数种方法，选择一种最合适的即可"></a>下面我将会提到数种方法，选择一种最合适的即可</h2><h2 id="1-直接插入到某一篇文章"><a href="#1-直接插入到某一篇文章" class="headerlink" title="1.直接插入到某一篇文章"></a>1.直接插入到某一篇文章</h2><h3 id="text-iframe-标签"><a href="#text-iframe-标签" class="headerlink" title="$\text{iframe}$标签"></a>$\text{iframe}$标签</h3><p>相当的简单</p>
-<p>先到网易云音乐中中搜出你想要的音乐，然后点击<strong>生成外链播放器</strong></p>
-<p>所需要的所有代码都在这个框框内了</p>
-<p><img src="https://s1.ax1x.com/2020/07/11/UQzKDs.png" alt="温馨提示：打开这个页面的时候记得关闭声音"></p>
-<p>然后把这个代码粘贴到你的文章的$\text{.md}$文件中，就可以显示了</p>
-<p><img src="https://s1.ax1x.com/2020/07/11/UlSflF.png" alt="大概就是......这个样子的"></p>
-<h3 id="text-JavaScript-标签"><a href="#text-JavaScript-标签" class="headerlink" title="$\text{JavaScript}$标签"></a>$\text{JavaScript}$标签</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://ae01.alicdn.com/kf/U9977f35f4c25466ca7b7fc536dc5a0cca.jpg" alt="就是这个效果"></p>
-<h2 id="2-使用-text-Hexo-tag-Aplayer-插件"><a href="#2-使用-text-Hexo-tag-Aplayer-插件" class="headerlink" title="2.使用$\text{Hexo-tag-Aplayer}$插件"></a>2.使用$\text{Hexo-tag-Aplayer}$插件</h2><p>$\text{hexo-tag-aplayer}$是$\text{Aplayer}$在$\text{Hexo}$上的插件，其配置可以参考<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">官方文档</a><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-tag-aplayer</span></span><br></pre></td></tr></table></figure></p>
-<p>在文章的markdown文档里添加<br><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"她的睫毛"</span> <span class="string">"周杰伦"</span> <span class="string">"http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3"</span>  <span class="string">"http://home.ustc.edu.cn/~mmmwhy/jay.jpg"</span> <span class="string">"autoplay=false"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ae01.alicdn.com/kf/Udfd851ed33b64db4a48fa81beed53effG.jpg" alt="Aplayer"></p>
-<hr>
-<h2 id="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"><a href="#以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面" class="headerlink" title="以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面"></a>以上两种都只能实现单篇文章内的播放，下面这一种是将播放器部署在所有界面</h2><h3 id="可以控制是否自动播放（自动播放移动端不支持）"><a href="#可以控制是否自动播放（自动播放移动端不支持）" class="headerlink" title="可以控制是否自动播放（自动播放移动端不支持）"></a>可以控制是否自动播放（<del>自动播放移动端不支持</del>）</h3><p>修改  <code>themes/next/layout/_macro/sidebar.swig</code>  文件</p>
-<p>添加播放器内容<br><figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 音乐播放器 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.background_music %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; theme.background_music &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br><img src="https://s1.ax1x.com/2020/07/11/Ul97RK.png" alt="注意上下文位置"></p>
-<p>在 <code>themes/next/_config.yml</code> 主题配置文件中添加歌单地址配置</p>
-<figure class="highlight plain"><figcaption><span>//music.163.com/outchain/player?type</span></figcaption><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line">background_music:</span><br></pre></td></tr></table></figure>
-<p>如图所示填入歌曲的部分HTML代码</p>
-<hr>
-<h2 id="添加歌单"><a href="#添加歌单" class="headerlink" title="添加歌单"></a>添加歌单</h2><p>创建歌单，复制代码<br><img src="https://ae01.alicdn.com/kf/Ub350f782a6774d0f8a619e8fee247af3s.jpg" alt=""></p>
-<p>把 <code>height=90</code> 改成 <code>height=66</code></p>
-<p>最后贴一张我的博客的效果图</p>
-<p><img src="https://ae01.alicdn.com/kf/U97a85f1666514b8494aab98b19b60e4fe.jpg" alt=""></p>
-<hr>
-<h2 id="也可以单独的做一个歌单页面"><a href="#也可以单独的做一个歌单页面" class="headerlink" title="也可以单独的做一个歌单页面"></a>也可以单独的做一个歌单页面</h2><p>最新版的 $\text{hexo-tag-aplayer}$ 已经支持了$\text{MetingJS}$的使用，可以直接解析网络平台的歌曲，首先要在站点配置文件中开启 $\text{meting}$ 模式，添加以下代码在配置文件的最后：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>复制歌单的链接，然后复制歌单的$\text{id}$，例如 <a href="https://music.163.com/playlist?id=523845661&amp;userid=46562117" target="_blank" rel="noopener">https://music.163.com/playlist?id=523845661&amp;userid=46562117</a> ，这个歌单的id就是523845661，公司名可以是tencent、netease或是其他公司，下面给出一个例子，打开 /Hexo/source/playlist/index.md文件，输入：<br><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% meting <span class="string">"7634442256"</span> <span class="string">"tencent"</span> <span class="string">"playlist"</span> <span class="string">"theme:#FF4081"</span> <span class="string">"mode:circulation"</span> <span class="string">"mutex:true"</span> <span class="string">"listmaxheight:340px"</span> <span class="string">"preload:auto"</span> %&#125;</span><br></pre></td></tr></table></figure><br>这就是一个<a href="https://y.qq.com/n/m/detail/taoge/index.html?id=7634442256" target="_blank" rel="noopener">$\text{QQ}$音乐</a>的歌单</p>
-<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://ae01.alicdn.com/kf/U5aadb166f3f74bbfbdb78d5f30b53099K.jpg" alt="效果还是不错的"></p>
-]]></content>
+    <title>Hexo博客添加浏览进度</title>
+    <url>/posts/Hexo-rate/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用$\text{NexT}$主题内置的插件实现浏览进度的显示<br><a id="more"></a></p>
+<h3 id="打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件"><a href="#打开-themes-next-config-yml-搜索关键字-scrollpercent-把-false-改为-true-以启动插件" class="headerlink" title="打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true 以启动插件"></a>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> 以启动插件</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3aidO.png" alt=""></p>
+<h3 id="如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面"><a href="#如果想把-top-按钮放在侧边栏-打开-themes-next-config-yml-搜索关键字-b2t-把-false-改为-true，这一行就在-scrollpercent-的上面" class="headerlink" title="如果想把 top 按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true，这一行就在 scrollpercent 的上面"></a>如果想把 <code>top</code> 按钮放在侧边栏,打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>b2t</code> ,把 <code>false</code> 改为 <code>true</code>，这一行就在 <code>scrollpercent</code> 的上面</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Back to top in sidebar (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">b2t:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -488,16 +488,25 @@
 ]]></content>
   </entry>
   <entry>
-    <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <url>/posts/yi-ben-tong-1332/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
-<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>内网穿透的实现</title>
+    <url>/posts/Intranet-Penetration/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
+<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
+<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
+<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
+<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
+<p>（二）</p>
+<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
+<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
+<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
+<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
+<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
 ]]></content>
       <categories>
-        <category>题解</category>
+        <category>NET</category>
       </categories>
       <tags>
-        <tag>一本通</tag>
+        <tag>内网穿透</tag>
       </tags>
   </entry>
   <entry>
@@ -558,25 +567,16 @@
       </tags>
   </entry>
   <entry>
-    <title>内网穿透的实现</title>
-    <url>/posts/Intranet-Penetration/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>因为旧电脑上有一个近千元的正版软件，只用了一次就换了电脑，而这本子经常不回携带。不得已决定做一个内网穿透<br><a id="more"></a></p>
-<h2 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h2><p>由于$\text{IPv4}$基本分配殆尽，接近枯竭，而且没有必要<del>Money</del>拉专线。虽说有了$\text{IPv6}$，但要一个公网$\text{ip}$依旧不是很容易（$\text{IPv6}$也没有完全普及，原因有很多种）。</p>
-<p>$ipconfig$出来的事实上是内网的ip地址，<del>没有卵用</del>，自然是无法直接与外部链接的。<br><img src="https://ae01.alicdn.com/kf/Ubc3b98fd561a4dce805336ba27501926n.jpg" alt=""></p>
-<h3 id="二、-text-Solution"><a href="#二、-text-Solution" class="headerlink" title="二、$\text{Solution}$"></a>二、$\text{Solution}$</h3><p> （一）<br>使用<a href="https://www.natfrp.com/" target="_blank" rel="noopener">Sakura Frp</a>，注册账号，然后记下访问秘钥<br><img src="https://ae01.alicdn.com/kf/Ueac115e8e7584e708c91556215684d11w.jpg" alt=""></p>
-<p>随后选择适合的应用，下载<br><img src="https://ae01.alicdn.com/kf/U782175ae5a23442aad9b00f217c2a2df4.jpg" alt=""></p>
-<p>（二）</p>
-<p>打开<br><img src="https://ae01.alicdn.com/kf/U21fa9cae4e1e48fc9c7706619b33d576p.jpg" alt=""></p>
-<p>如此设置<br><img src="https://ae01.alicdn.com/kf/U0f85273dd5594d708af86384374864f1Q.jpg" alt=""></p>
-<p>如果被远程控制的电脑没有密码，那么<br>$计算机配置-&gt;windows设置-&gt;安全设置-&gt;本地策略-&gt;安全选项$，禁用 <strong>账户：使用空白密码的本地帐户只允许控制台登陆</strong>。</p>
-<p>（三）打开下载好的软件输入访问秘钥。点击加号新建隧道，输入本机IP。端口填远程桌面的端口，默认是3389，隧道名称随便填，如果不填的话就会产生一个随机的名称，隧道类型选择TCP，远程端口可以自己指定，范围是10240~65535，不能和已有的重复服务器看情况自己选择，关于服务器的详细情况官网上上看。<br><img src="https://ae01.alicdn.com/kf/Ub8828c1420cb4bd28a47282c02c0962cq.jpg" alt=""></p>
-<p> （四）打开远程桌面链接，输入刚才的公网$\text{ip}$，输入用户名和密码，即可连接。<br> <img src="https://ae01.alicdn.com/kf/U315d8a6c44e6424a80c0e463f2d9111aq.jpg" alt=""></p>
+    <title>一本通1332：【例2-1】周末舞会 题解</title>
+    <url>/posts/yi-ben-tong-1332/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>非常水的大水题<br><a id="more"></a></p>
+<p>真的，真的，非常水<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n, m, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)     <span class="comment">//枚举每一对</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (i % n + <span class="number">1</span>) &lt;&lt; <span class="string">" "</span> &lt;&lt; (i % m + <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>NET</category>
+        <category>题解</category>
       </categories>
       <tags>
-        <tag>内网穿透</tag>
+        <tag>一本通</tag>
       </tags>
   </entry>
   <entry>

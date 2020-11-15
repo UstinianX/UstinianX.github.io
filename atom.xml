@@ -6,11 +6,11 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ustinianx.com/"/>
-  <updated>2020-11-09T13:49:35.918Z</updated>
+  <updated>2020-11-09T13:58:27.265Z</updated>
   <id>https://ustinianx.com/</id>
   
   <author>
-    <name>Kirito_2022</name>
+    <name>Kirito 2022</name>
     
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://ustinianx.com/posts/CentOS-Apache/"/>
     <id>https://ustinianx.com/posts/CentOS-Apache/</id>
     <published>2020-11-09T09:47:12.946Z</published>
-    <updated>2020-11-09T13:49:35.918Z</updated>
+    <updated>2020-11-09T13:58:27.265Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>搭建Web服务器，系统是CentOS 8.1</p><p>踩了一些坑，最后找到了正确的方法</p><a id="more"></a><h1 id="安装-Apache"><a href="#安装-Apache" class="headerlink" title="安装 Apache"></a>安装 Apache</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y httpd</span><br></pre></td></tr></table></figure><h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure><h1 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h1><p>设置开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig httpd on</span><br></pre></td></tr></table></figure></p><p>检查开机启动设置:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl list-unit-files | grep httpd</span><br></pre></td></tr></table></figure></p><p><img src="https://pic.rmb.bdstatic.com/bjh/a9368c9d279bd1f3bdf6f84948af61c5.png" alt=""></p><h1 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h1><p>现在可以访问啦！</p><p>云服务器：在本地设备浏览器中输入服务器的公网ip</p><p>本地服务器：输入内网ip</p><h1 id="修改默认主页"><a href="#修改默认主页" class="headerlink" title="修改默认主页"></a>修改默认主页</h1><p>默认网站根目录位于 <code>/var/www/html</code> 下，可以通过修改 <code>/etc/httpd/conf/httpd.conf</code> 修改</p><p><img src="https://pic.rmb.bdstatic.com/bjh/a131cd8b0c5c3cabb338362f6af79d39.png" alt=""></p><p>在 <code>/var/www/html</code> 创建一个 <code>index.html</code>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html</span><br></pre></td></tr></table></figure><p>把你的网站源文件扔进去，在访问时就可以看到网站了</p><h1 id="访问服务器中的图片-amp-下载服务器中的文件"><a href="#访问服务器中的图片-amp-下载服务器中的文件" class="headerlink" title="访问服务器中的图片&amp;下载服务器中的文件"></a>访问服务器中的图片&amp;下载服务器中的文件</h1><p>网站根目录下的文件是可以被外界访问到的。把图片或文件放到该目录下，键入<code>http://ip/文件名</code>的格式</p><figure class="highlight https"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://101.200.15.178/Hello-World.cpp</span></span><br></pre></td></tr></table></figure><h1 id="使用FTP访问服务器"><a href="#使用FTP访问服务器" class="headerlink" title="使用FTP访问服务器"></a>使用FTP访问服务器</h1><p>下载 <a href="https://www.baidu.com/s?tn=60017574_oem_dg&amp;ie=utf-8&amp;wd=Xftp+6" target="_blank" rel="noopener">$\text{Xftp 6}$</a> </p><p>点击左上角的 <code>打开</code> </p><p><img src="https://pic.rmb.bdstatic.com/bjh/38c0c781a8f4dfc74044e980f386cb2c.png" alt=""></p><p>可以看到已经创建过的会话</p><p>如果需要创建新会话，点左上角 <code>新建</code></p><p><img src="https://pic.rmb.bdstatic.com/bjh/e0ba373ad8218e39d0cc4515bc942b1b.png" alt=""></p><p>主机：添公网ip地址</p><p>协议：可以自己设置，默认的22也可以</p><p>用户名&amp;密码：服务器系统的登陆密码。Linux用户名一般是 <code>root</code>, Windows一般是 <code>Administrator</code></p><p><img src="https://pic.rmb.bdstatic.com/bjh/f507c8edb69da9172a915b6e2386523c.png" alt=""></p><p>此时就可以操作文件了！</p><p><img src="https://pic.rmb.bdstatic.com/bjh/912a3e439e16d8ee0930e9b2ade817fa.png" alt=""></p>]]></content>
     
