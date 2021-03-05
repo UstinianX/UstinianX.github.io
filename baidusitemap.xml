@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://ustinianx.github.io/posts/CentOS-Apache/</loc>
-    <lastmod>2020-11-09</lastmod>
+    <lastmod>2021-03-05</lastmod>
   </url>
   <url>
     <loc>http://ustinianx.github.io/posts/CSP2020-Retired/</loc>
@@ -15,10 +15,6 @@
   <url>
     <loc>http://ustinianx.github.io/posts/Misaka's-Sisters/</loc>
     <lastmod>2020-10-02</lastmod>
-  </url>
-  <url>
-    <loc>http://ustinianx.github.io/posts/Optimize/</loc>
-    <lastmod>2020-09-13</lastmod>
   </url>
   <url>
     <loc>http://ustinianx.github.io/posts/Beep-Function/</loc>
@@ -34,10 +30,6 @@
   </url>
   <url>
     <loc>http://ustinianx.github.io/posts/Hexo-Code-Copying/</loc>
-    <lastmod>2020-09-08</lastmod>
-  </url>
-  <url>
-    <loc>http://ustinianx.github.io/posts/f77810a8/</loc>
     <lastmod>2020-09-08</lastmod>
   </url>
   <url>
@@ -75,9 +67,5 @@
   <url>
     <loc>http://ustinianx.github.io/posts/Chtholly-Tree/</loc>
     <lastmod>2020-08-31</lastmod>
-  </url>
-  <url>
-    <loc>http://ustinianx.github.io/posts/4683/</loc>
-    <lastmod>2020-08-07</lastmod>
   </url>
 </urlset> 
