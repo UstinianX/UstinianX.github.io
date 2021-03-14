@@ -1,5 +1,5 @@
-http://ustinianx.github.io/posts/CentOS-Apache/
-http://ustinianx.github.io/posts/CSP2020-Retired/
-http://ustinianx.github.io/posts/Misaka's-Sisters/
-http://ustinianx.github.io/posts/Beep-Function/
-http://ustinianx.github.io/posts/Hexo-Code-Copying/
+https://wincer.icu/posts/CentOS-Apache/
+https://wincer.icu/posts/CSP2020-Retired/
+https://wincer.icu/posts/Misaka's-Sisters/
+https://wincer.icu/posts/Beep-Function/
+https://wincer.icu/posts/Hexo-Code-Copying/

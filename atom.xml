@@ -5,12 +5,12 @@
   <subtitle>夜空のように、悲しい世界を優しく包みます</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://ustinianx.github.io/"/>
+  <link href="https://wincer.icu/"/>
   <updated>2021-03-05T15:26:44.524Z</updated>
-  <id>http://ustinianx.github.io/</id>
+  <id>https://wincer.icu/</id>
   
   <author>
-    <name>Kirito 2022</name>
+    <name>Wincer</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CentOS 8搭建Web服务器（使用Apache）</title>
-    <link href="http://ustinianx.github.io/posts/CentOS-Apache/"/>
-    <id>http://ustinianx.github.io/posts/CentOS-Apache/</id>
+    <link href="https://wincer.icu/posts/CentOS-Apache/"/>
+    <id>https://wincer.icu/posts/CentOS-Apache/</id>
     <published>2020-11-09T09:47:12.946Z</published>
     <updated>2021-03-05T15:26:44.524Z</updated>
     
@@ -33,19 +33,19 @@
     </summary>
     
     
-      <category term="服务器" scheme="http://ustinianx.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://wincer.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="服务器" scheme="http://ustinianx.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://wincer.icu/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="CentOS" scheme="http://ustinianx.github.io/tags/CentOS/"/>
+      <category term="CentOS" scheme="https://wincer.icu/tags/CentOS/"/>
     
   </entry>
   
   <entry>
     <title>CSP退役感悟</title>
-    <link href="http://ustinianx.github.io/posts/CSP2020-Retired/"/>
-    <id>http://ustinianx.github.io/posts/CSP2020-Retired/</id>
+    <link href="https://wincer.icu/posts/CSP2020-Retired/"/>
+    <id>https://wincer.icu/posts/CSP2020-Retired/</id>
     <published>2020-10-17T10:01:34.439Z</published>
     <updated>2020-10-21T11:54:56.296Z</updated>
     
@@ -58,17 +58,17 @@
     </summary>
     
     
-      <category term="CSP" scheme="http://ustinianx.github.io/categories/CSP/"/>
+      <category term="CSP" scheme="https://wincer.icu/categories/CSP/"/>
     
     
-      <category term="CSP" scheme="http://ustinianx.github.io/tags/CSP/"/>
+      <category term="CSP" scheme="https://wincer.icu/tags/CSP/"/>
     
   </entry>
   
   <entry>
     <title>御坂妹妹 题解</title>
-    <link href="http://ustinianx.github.io/posts/Misaka&#39;s-Sisters/"/>
-    <id>http://ustinianx.github.io/posts/Misaka&#39;s-Sisters/</id>
+    <link href="https://wincer.icu/posts/Misaka&#39;s-Sisters/"/>
+    <id>https://wincer.icu/posts/Misaka&#39;s-Sisters/</id>
     <published>2020-09-13T13:53:36.554Z</published>
     <updated>2020-10-02T03:14:12.755Z</updated>
     
@@ -81,23 +81,23 @@
     </summary>
     
     
-      <category term="算法" scheme="http://ustinianx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://wincer.icu/categories/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="题解" scheme="http://ustinianx.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/categories/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="贪心" scheme="http://ustinianx.github.io/categories/%E8%B4%AA%E5%BF%83/"/>
+      <category term="贪心" scheme="https://wincer.icu/categories/%E8%B4%AA%E5%BF%83/"/>
     
     
-      <category term="题解" scheme="http://ustinianx.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="贪心" scheme="http://ustinianx.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+      <category term="贪心" scheme="https://wincer.icu/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
   <entry>
     <title>C++发声函数 (Beep)</title>
-    <link href="http://ustinianx.github.io/posts/Beep-Function/"/>
-    <id>http://ustinianx.github.io/posts/Beep-Function/</id>
+    <link href="https://wincer.icu/posts/Beep-Function/"/>
+    <id>https://wincer.icu/posts/Beep-Function/</id>
     <published>2020-09-09T12:40:14.187Z</published>
     <updated>2020-09-09T14:22:36.019Z</updated>
     
@@ -110,21 +110,21 @@
     </summary>
     
     
-      <category term="函数" scheme="http://ustinianx.github.io/categories/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="https://wincer.icu/categories/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="C++" scheme="http://ustinianx.github.io/categories/C/"/>
+      <category term="C++" scheme="https://wincer.icu/categories/C/"/>
     
     
-      <category term="函数" scheme="http://ustinianx.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="https://wincer.icu/tags/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="C++" scheme="http://ustinianx.github.io/tags/C/"/>
+      <category term="C++" scheme="https://wincer.icu/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加代码复制功能</title>
-    <link href="http://ustinianx.github.io/posts/Hexo-Code-Copying/"/>
-    <id>http://ustinianx.github.io/posts/Hexo-Code-Copying/</id>
+    <link href="https://wincer.icu/posts/Hexo-Code-Copying/"/>
+    <id>https://wincer.icu/posts/Hexo-Code-Copying/</id>
     <published>2020-09-08T13:22:57.595Z</published>
     <updated>2020-09-08T14:14:36.413Z</updated>
     
@@ -137,17 +137,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>C++实用函数</title>
-    <link href="http://ustinianx.github.io/posts/C++-Pragmatic-Function/"/>
-    <id>http://ustinianx.github.io/posts/C++-Pragmatic-Function/</id>
+    <link href="https://wincer.icu/posts/C++-Pragmatic-Function/"/>
+    <id>https://wincer.icu/posts/C++-Pragmatic-Function/</id>
     <published>2020-09-05T09:37:22.508Z</published>
     <updated>2020-10-05T08:04:19.552Z</updated>
     
@@ -161,21 +161,21 @@
     </summary>
     
     
-      <category term="函数" scheme="http://ustinianx.github.io/categories/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="https://wincer.icu/categories/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="C++" scheme="http://ustinianx.github.io/categories/C/"/>
+      <category term="C++" scheme="https://wincer.icu/categories/C/"/>
     
     
-      <category term="函数" scheme="http://ustinianx.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="https://wincer.icu/tags/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="C++" scheme="http://ustinianx.github.io/tags/C/"/>
+      <category term="C++" scheme="https://wincer.icu/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>P5660 数字游戏 &amp; CSP-J 2019 T1</title>
-    <link href="http://ustinianx.github.io/posts/P5660/"/>
-    <id>http://ustinianx.github.io/posts/P5660/</id>
+    <link href="https://wincer.icu/posts/P5660/"/>
+    <id>https://wincer.icu/posts/P5660/</id>
     <published>2020-08-31T08:39:10.415Z</published>
     <updated>2020-09-09T13:16:50.650Z</updated>
     
@@ -188,25 +188,25 @@
     </summary>
     
     
-      <category term="算法" scheme="http://ustinianx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://wincer.icu/categories/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="题解" scheme="http://ustinianx.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/categories/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="字符串" scheme="http://ustinianx.github.io/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="https://wincer.icu/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-      <category term="题解" scheme="http://ustinianx.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="CSP-J 2019" scheme="http://ustinianx.github.io/tags/CSP-J-2019/"/>
+      <category term="CSP-J 2019" scheme="https://wincer.icu/tags/CSP-J-2019/"/>
     
-      <category term="字符串" scheme="http://ustinianx.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="https://wincer.icu/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>P5662 纪念品 &amp; CSP-J 2019 T3</title>
-    <link href="http://ustinianx.github.io/posts/P5662/"/>
-    <id>http://ustinianx.github.io/posts/P5662/</id>
+    <link href="https://wincer.icu/posts/P5662/"/>
+    <id>https://wincer.icu/posts/P5662/</id>
     <published>2020-08-31T07:24:31.694Z</published>
     <updated>2020-09-09T13:17:09.424Z</updated>
     
@@ -219,29 +219,29 @@
     </summary>
     
     
-      <category term="算法" scheme="http://ustinianx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://wincer.icu/categories/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="题解" scheme="http://ustinianx.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/categories/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="背包" scheme="http://ustinianx.github.io/categories/%E8%83%8C%E5%8C%85/"/>
+      <category term="背包" scheme="https://wincer.icu/categories/%E8%83%8C%E5%8C%85/"/>
     
-      <category term="动态规划" scheme="http://ustinianx.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="https://wincer.icu/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="题解" scheme="http://ustinianx.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="CSP-J 2019" scheme="http://ustinianx.github.io/tags/CSP-J-2019/"/>
+      <category term="CSP-J 2019" scheme="https://wincer.icu/tags/CSP-J-2019/"/>
     
-      <category term="动态规划" scheme="http://ustinianx.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="https://wincer.icu/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
-      <category term="完全背包" scheme="http://ustinianx.github.io/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/"/>
+      <category term="完全背包" scheme="https://wincer.icu/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>珂朵莉树学习笔记</title>
-    <link href="http://ustinianx.github.io/posts/Chtholly-Tree/"/>
-    <id>http://ustinianx.github.io/posts/Chtholly-Tree/</id>
+    <link href="https://wincer.icu/posts/Chtholly-Tree/"/>
+    <id>https://wincer.icu/posts/Chtholly-Tree/</id>
     <published>2020-08-23T14:57:36.884Z</published>
     <updated>2020-08-31T09:01:45.592Z</updated>
     
@@ -255,19 +255,19 @@
     </summary>
     
     
-      <category term="算法" scheme="http://ustinianx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://wincer.icu/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="珂朵莉树" scheme="http://ustinianx.github.io/tags/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/"/>
+      <category term="珂朵莉树" scheme="https://wincer.icu/tags/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/"/>
     
-      <category term="算法" scheme="http://ustinianx.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://wincer.icu/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客搭建全面指南+基于NexT的优化</title>
-    <link href="http://ustinianx.github.io/posts/Hexo/"/>
-    <id>http://ustinianx.github.io/posts/Hexo/</id>
+    <link href="https://wincer.icu/posts/Hexo/"/>
+    <id>https://wincer.icu/posts/Hexo/</id>
     <published>2020-08-07T02:47:16.525Z</published>
     <updated>2020-08-31T09:03:35.880Z</updated>
     
@@ -282,17 +282,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>一本通1332：【例2-1】周末舞会 题解</title>
-    <link href="http://ustinianx.github.io/posts/yi-ben-tong-1332/"/>
-    <id>http://ustinianx.github.io/posts/yi-ben-tong-1332/</id>
+    <link href="https://wincer.icu/posts/yi-ben-tong-1332/"/>
+    <id>https://wincer.icu/posts/yi-ben-tong-1332/</id>
     <published>2020-07-31T11:02:04.435Z</published>
     <updated>2020-08-31T09:03:10.846Z</updated>
     
@@ -305,17 +305,17 @@
     </summary>
     
     
-      <category term="题解" scheme="http://ustinianx.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="https://wincer.icu/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="一本通" scheme="http://ustinianx.github.io/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
+      <category term="一本通" scheme="https://wincer.icu/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加浏览进度</title>
-    <link href="http://ustinianx.github.io/posts/Hexo-rate/"/>
-    <id>http://ustinianx.github.io/posts/Hexo-rate/</id>
+    <link href="https://wincer.icu/posts/Hexo-rate/"/>
+    <id>https://wincer.icu/posts/Hexo-rate/</id>
     <published>2020-07-12T06:07:33.478Z</published>
     <updated>2020-08-31T09:04:12.095Z</updated>
     
@@ -328,17 +328,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加RSS订阅功能</title>
-    <link href="http://ustinianx.github.io/posts/Hexo-RSS/"/>
-    <id>http://ustinianx.github.io/posts/Hexo-RSS/</id>
+    <link href="https://wincer.icu/posts/Hexo-RSS/"/>
+    <id>https://wincer.icu/posts/Hexo-RSS/</id>
     <published>2020-07-12T01:19:15.183Z</published>
     <updated>2020-08-31T09:04:21.794Z</updated>
     
@@ -354,19 +354,19 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/tags/Hexo/"/>
     
-      <category term="RSS" scheme="http://ustinianx.github.io/tags/RSS/"/>
+      <category term="RSS" scheme="https://wincer.icu/tags/RSS/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加背景音乐</title>
-    <link href="http://ustinianx.github.io/posts/Hexo-Background/"/>
-    <id>http://ustinianx.github.io/posts/Hexo-Background/</id>
+    <link href="https://wincer.icu/posts/Hexo-Background/"/>
+    <id>https://wincer.icu/posts/Hexo-Background/</id>
     <published>2020-07-11T06:17:48.875Z</published>
     <updated>2020-08-31T09:03:45.643Z</updated>
     
@@ -379,17 +379,17 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://ustinianx.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://wincer.icu/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>内网穿透的实现</title>
-    <link href="http://ustinianx.github.io/posts/Intranet-Penetration/"/>
-    <id>http://ustinianx.github.io/posts/Intranet-Penetration/</id>
+    <link href="https://wincer.icu/posts/Intranet-Penetration/"/>
+    <id>https://wincer.icu/posts/Intranet-Penetration/</id>
     <published>2020-07-11T04:25:18.028Z</published>
     <updated>2020-08-31T09:02:22.851Z</updated>
     
@@ -402,17 +402,17 @@
     </summary>
     
     
-      <category term="NET" scheme="http://ustinianx.github.io/categories/NET/"/>
+      <category term="NET" scheme="https://wincer.icu/categories/NET/"/>
     
     
-      <category term="内网穿透" scheme="http://ustinianx.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+      <category term="内网穿透" scheme="https://wincer.icu/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
   </entry>
   
   <entry>
     <title>VMWare虚拟机滥用指南</title>
-    <link href="http://ustinianx.github.io/posts/VMWare/"/>
-    <id>http://ustinianx.github.io/posts/VMWare/</id>
+    <link href="https://wincer.icu/posts/VMWare/"/>
+    <id>https://wincer.icu/posts/VMWare/</id>
     <published>2020-07-11T04:19:12.622Z</published>
     <updated>2020-08-31T09:04:29.233Z</updated>
     
@@ -425,17 +425,17 @@
     </summary>
     
     
-      <category term="Software" scheme="http://ustinianx.github.io/categories/Software/"/>
+      <category term="Software" scheme="https://wincer.icu/categories/Software/"/>
     
     
-      <category term="虚拟机" scheme="http://ustinianx.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <category term="虚拟机" scheme="https://wincer.icu/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://ustinianx.github.io/posts/Hello-World/"/>
-    <id>http://ustinianx.github.io/posts/Hello-World/</id>
+    <link href="https://wincer.icu/posts/Hello-World/"/>
+    <id>https://wincer.icu/posts/Hello-World/</id>
     <published>2020-07-10T11:20:08.446Z</published>
     <updated>2020-08-31T09:03:29.686Z</updated>
     
